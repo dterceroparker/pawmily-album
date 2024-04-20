@@ -3,53 +3,42 @@
   <% } %>
 </head>
 <body>
-  <div class="navbar">
+  <div class="sidebar">
     <% if (user) { %>
-      <div class="sidebar">
-        <div class="top">
-          <div class="logo">
-            <i class="fas fa-solid fa-duotone fa-paw"></i>
-            <span>PawMily Album</span>
-          </div>
-          <i class="fas fa-solid fa-compass" id="menu-btn"></i>
-        </div>
-        <div class="user">
-          <a href="/auth/logout" class="right">
-            <i class="fas fa-solid fa-circle-user"></i>
+        <ul>
+          <li>
+            <a href="#" class="logo">
+              <i class="fas fa-solid fa-duotone fa-2x fa-paw"></i>
+              <span class="nav-item">PawMily Album</span>
+            </a>
+          </li>
+          <li>
+            <a href="/auth/logout" class="right">
+            <button type="submit">Logout</button>
           </a>
-          <ul>
-            <il>
-              <a href="#">
-                <i class="fas fa-solid fa-grip"></i>
-                <span class="nav-item">Dashboard</span>
-              </a>
-              <span class="tooltip">Dashboard</span>
-            </il>
-            <il>
-              <a href="#">
-                <i class="fas fa-solid fa-house"></i>
-                <span class="nav-item">My Posts</span>
-              </a>
-              <span class="tooltip">My Posts</span>
-            </il>
-            <il>
-              <a class="drop-down content" href="#">
-                <i class="fas fa-solid fa-brands fa-wpexplorer"></i>
-                  <a href="#"><option>Puppy</option></a>
-                  <a href="#"><option>Adult</option></a>
-                  <a href="#"><option>Senior</option></a>
-                <span class="nav-item">Explore Posts</span>
-              </a>
-              <span class="tooltip">Explore Posts</span>
-            </il>
-            <il>
-              <a href="#">
-                <i class="fas fa-solid fa-file-pen"></i>
-                <span class="nav-item">New Post</span>
-              </a>
-              <span class="tooltip">New Post</span>
-            </il>
-          </ul>
+        </li>
+          <li>
+            <a href="#">
+            <i class="fas fa-solid fa-house"></i>
+            <span class="nav-item">My Posts</span>
+          </a>
+        </li>
+        <li>
+        <a class="dropdown" href="/posts">
+            <i class="fas fa-solid fa-list-dropdown"></i>
+            <span class="nav-item">Explore</span>
+            <option><a href="#">Puppy</a></option>
+            <option><a href="#">Adult</a></option>
+            <option><a href="#">Senior</a></option>
+          </a>
+        </li>
+          <li>
+            <a href="/posts/new">
+              <i class="fas fa-solid fa-flie-pen"></i>
+              <span class="nav-item">New Post</span>
+          </a>
+          </li>
+        </ul>
     <% } else { %>
       <div 
         id="g_id_onload"
