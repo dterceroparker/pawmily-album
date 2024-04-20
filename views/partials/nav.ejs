@@ -3,13 +3,53 @@
   <% } %>
 </head>
 <body>
-  <nav class="top-nav">
+  <div class="navbar">
     <% if (user) { %>
-      <a href="/posts">All Posts</a>
-      <a href="/posts/new">New Post</a>
-      <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
-      </a>
+      <div class="sidebar">
+        <div class="top">
+          <div class="logo">
+            <i class="fas fa-solid fa-duotone fa-paw"></i>
+            <span>PawMily Album</span>
+          </div>
+          <i class="fas fa-solid fa-compass" id="menu-btn"></i>
+        </div>
+        <div class="user">
+          <a href="/auth/logout" class="right">
+            <i class="fas fa-solid fa-circle-user"></i>
+          </a>
+          <ul>
+            <il>
+              <a href="#">
+                <i class="fas fa-solid fa-grip"></i>
+                <span class="nav-item">Dashboard</span>
+              </a>
+              <span class="tooltip">Dashboard</span>
+            </il>
+            <il>
+              <a href="#">
+                <i class="fas fa-solid fa-house"></i>
+                <span class="nav-item">My Posts</span>
+              </a>
+              <span class="tooltip">My Posts</span>
+            </il>
+            <il>
+              <a class="drop-down content" href="#">
+                <i class="fas fa-solid fa-brands fa-wpexplorer"></i>
+                  <a href="#"><option>Puppy</option></a>
+                  <a href="#"><option>Adult</option></a>
+                  <a href="#"><option>Senior</option></a>
+                <span class="nav-item">Explore Posts</span>
+              </a>
+              <span class="tooltip">Explore Posts</span>
+            </il>
+            <il>
+              <a href="#">
+                <i class="fas fa-solid fa-file-pen"></i>
+                <span class="nav-item">New Post</span>
+              </a>
+              <span class="tooltip">New Post</span>
+            </il>
+          </ul>
     <% } else { %>
       <div 
         id="g_id_onload"
@@ -28,18 +68,4 @@
         data-logo_alignment="left"
       ></div>
     <% } %>
-  </nav>
-
-  <div class="sidebar">
-    <div class="top">
-      <div class="logo">
-        <i class="fas fa-solid fa-duotone fa-2x fa-paw" id="menu-btn"></i>
-        <span>PawMily Album</span>
-      </div>
-      <i class="fas fa-solid fa-compass fa-2x"></i>
-    </div>
-    <div class="user">
-      <i class="fas fa-solid fa-circle-user fa-2x"></i>
-      
-    </div>
   </div>
