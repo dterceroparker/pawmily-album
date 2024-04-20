@@ -16,8 +16,8 @@
   width: 90px;
   overflow: hidden;
   transition: width 0.2s linear;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
-  background-color: rgb(0, 157, 255)
+  box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
+  background-color: rgb(113, 173, 209)
 }
 .sidebar:hover {
   width: 280px;
@@ -35,8 +35,12 @@
 .logo span {
   font-weight: bold;
   padding-left: 15px;
-  font-size: 18px;
+  font-size: 1rem;
   text-transform: uppercase;
+}
+.logout-btn {
+  border-radius: 20px;
+  background-color: aquamarine;
 }
 a {
   position: relative;
@@ -51,7 +55,7 @@ a {
   width: 70px;
   height: 40px;
   top: 14px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .nav-item {
@@ -60,7 +64,7 @@ a {
   margin-left: 10px;
 }
 a:hover {
-  background: blue;
+  background: rgba(0, 0, 255, 0.312);
 }
 /* The Universal Selector */
 *, /* All elements*/

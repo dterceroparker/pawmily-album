@@ -8,34 +8,36 @@
         <ul>
           <li>
             <a href="#" class="logo">
-              <i class="fas fa-solid fa-duotone fa-2x fa-paw"></i>
-              <span class="nav-item">PawMily Album</span>
+            <i class="fas fa-solid fa-duotone fa-2x fa-paw"></i>
+            <span class="nav-item">PawMily Album</span>
             </a>
           </li>
           <li>
             <a href="/auth/logout" class="right">
-            <button type="submit">Logout</button>
-          </a>
-        </li>
+            <button type="logout-btn">Logout</button>
+            </a>
+          </li>
           <li>
             <a href="#">
             <i class="fas fa-solid fa-house"></i>
             <span class="nav-item">My Posts</span>
-          </a>
-        </li>
-        <li>
-        <a class="dropdown" href="/posts">
+            </a>
+          </li>
+          <li>
+            <a class="dropdown" href="/posts">
             <i class="fas fa-solid fa-list-dropdown"></i>
-            <span class="nav-item">Explore</span>
-            <option><a href="#">Puppy</a></option>
-            <option><a href="#">Adult</a></option>
-            <option><a href="#">Senior</a></option>
-          </a>
-        </li>
+            <label for="stage">Explore</label>
+            <select class="nav-item" name="stage" id="stage">
+              <option><a href="#">Puppy</a></option>
+              <option><a href="#">Adult</a></option>
+              <option><a href="#">Senior</a></option>
+            </select>
+            </a>
+          </li>
           <li>
             <a href="/posts/new">
-              <i class="fas fa-solid fa-flie-pen"></i>
-              <span class="nav-item">New Post</span>
+            <i class="fas fa-solid fa-flie-pen"></i>
+            <span class="nav-item">New Post</span>
           </a>
           </li>
         </ul>
