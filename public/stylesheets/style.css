@@ -7,6 +7,10 @@
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
+#avatar {
+  border-radius: 100%;
+  size-adjust: 1rem;
+}
 .sidebar {
   position: absolute;
   top: 0;
@@ -17,7 +21,7 @@
   overflow: hidden;
   transition: width 0.2s linear;
   box-shadow: 0 20px 35px rgb(0, 0, 0, 0.1);
-  background-color: rgb(113, 173, 209)
+  background-color: rgb(113, 173, 209);
 }
 .sidebar:hover {
   width: 280px;
@@ -97,7 +101,7 @@ main {
   left: 80px;
   transition: all 0.5s ease;
   width: calc(100% - 80px);
-  padding: 1rem; */
+  padding: 1rem;
 } 
 .container {
   display: flex;

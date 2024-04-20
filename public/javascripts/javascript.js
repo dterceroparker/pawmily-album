@@ -1,6 +1,22 @@
-let menuBtn = document.getElementById('menu-btn');
-let sidebar = document.querySelector('.sidebar');
+//Ben Manley's Code//
+const dateInputEl = document.getElementById('date-input')
+const hiddenDateInputEl = document.getElementById('hidden-date')
 
-menuBtn.onclick = function() {
-  sidebar.classList.toggle('active')
-}
+let offset = new Date().getTimezoneOffset() * 60000
+let oneYearFromNow = new Date().setFullYear(new Date().getFullYear() + 1)
+let localISOTime = new Date(oneYearFromNow - offset).toISOString().slice(0, 16)
+
+window.addEventListener('load', function() {
+  if (!dateInputEl.value) {
+    dateInputEl.value = localISOTime
+  }
+  hiddenDateInputEl.value = localISOTime
+})
+
+
+// let menuBtn = document.getElementById('menu-btn');
+// let sidebar = document.querySelector('.sidebar');
+
+// menuBtn.onclick = function() {
+//   sidebar.classList.toggle('active')
+// }

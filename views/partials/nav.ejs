@@ -5,6 +5,8 @@
 <body>
   <div class="sidebar">
     <% if (user) { %>
+      <img id="avatar" src="<%= user.profile.avatar %>"/>
+      <p>Welcome <%= user.profile.name %>!</p>
         <ul>
           <li>
             <a href="#" class="logo">
