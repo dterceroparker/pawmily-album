@@ -39,3 +39,8 @@ main {
 .right {
   margin-left: auto;
 }
+
+/*edit */
+nav > a {
+  margin-left: 16px;
+}
