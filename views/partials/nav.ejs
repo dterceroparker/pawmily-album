@@ -3,7 +3,7 @@
   <% } %>
 </head>
 <body>
-  <nav>
+  <nav class="top-nav">
     <% if (user) { %>
       <a href="/posts">All Posts</a>
       <a href="/posts/new">New Post</a>
@@ -29,3 +29,17 @@
       ></div>
     <% } %>
   </nav>
+
+  <div class="sidebar">
+    <div class="top">
+      <div class="logo">
+        <i class="fas fa-solid fa-duotone fa-2x fa-paw" id="menu-btn"></i>
+        <span>PawMily Album</span>
+      </div>
+      <i class="fas fa-solid fa-compass fa-2x"></i>
+    </div>
+    <div class="user">
+      <i class="fas fa-solid fa-circle-user fa-2x"></i>
+      
+    </div>
+  </div>

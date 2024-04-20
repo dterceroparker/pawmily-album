@@ -3,15 +3,10 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <h1><%= title %></h1>
+  <form action="/posts" method="POST"></form>
+    <label for="title-input">Title:</label>
+    <input type="text" name="description">
 </main>
 
 <%- include('../partials/footer') %>

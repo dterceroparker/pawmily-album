@@ -5,7 +5,7 @@ import * as postsCtrl from '../controllers/posts.js'
 const router = Router()
 
 //GET localhost:3000/posts/new
-router.get('/new', postsCtrl.new) 
+router.get('/new', isLoggedIn, postsCtrl.new) 
 
 export {
   router
