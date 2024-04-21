@@ -1,12 +1,10 @@
 .post-container {
   width: 400px;
 }
-
 .post-photo {
   display: block;
   width: 100%;
 }
-
 .post-stats {
   display: flex;
   justify-content: flex-start;

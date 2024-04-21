@@ -29,7 +29,7 @@ function show(req, res) {
     .then(post => {
       res.render('posts/show', {
         title: 'My Album',
-        post
+        post,
       })
     })
     .catch(err => {
@@ -71,10 +71,34 @@ function addLikes(req, res) {
   })
 }
 
+function deletePost(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    if (post.author._id.equals(req.user.profile._id)) {
+      post.remove
+      post.save()
+      .then(() => {
+        res.redirect(`posts/${post._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/posts')
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('posts')
+  })
+}
+
 export {
   newPost as new,
   create,
   show,
   index,
   addLikes,
+  deletePost as delete,
 }

@@ -8,30 +8,32 @@
   justify-content: center;
   align-items: center;
 }
-
-img {
-  width: 40px;
-  height: 40px;
+.post-photo {
+  max-width: 50%;
+  height: auto;
   border-radius: 8px;
   margin-right: 8px;
 }
-
+#avatar {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
 button {
   background-color: rgba(0, 81, 255, 0.519);
   color: #1a1a1a;
   font-weight: bold;
-  width: 105px;
+  width: 80px;
   height: 40px;
   border-radius: 8px;
   border: none;
 }
-
 .button-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
-
 .details-button {
-  background-color: rgba(79, 75, 67, 0.329);
+  background-color: rgba(15, 153, 151, 0.642);
   margin-left: 16px;
 }
