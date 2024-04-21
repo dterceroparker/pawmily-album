@@ -1,12 +1,37 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="stylesheets/posts/new.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script defer src="/javascripts/javascript.js"></script>
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= title %></h1>
+  <div class="my-pawmily">
+    <h2>My PawMily</h2>
+  </div>
   <div class="post-container">
-    <h3>Posted by: <img src="<%= post.author.avatar %>" alt="user profile image"><%= post.author.name %></h3>
-    <p><%= post.content %></p>
-   
+    <div class="author">
+      <h3>Author: <img src="<%= post.author.avatar %>" alt="user profile image"><%= post.author.name %></h3>
+      <img class="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+      <p><%= post.content %></p>
+    </div>
+  </div>
+  <div class="post-stats">
+    <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
+  <div class="rating-selected">
+    <span class="post-rating-button material-icons-outlined">favorite</span>
+    <span class="post-rating-count">0</span>
+  </div>
+    <div class="button-container">
+      <% if (post.author._id.equals(user.profile._id)) { %>
+        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+          <button class="edit-button">Edit ✎</button>
+          <button class="delete-button">Delete 🗑️</button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+
+  
+
 <%- include('../partials/footer') %>

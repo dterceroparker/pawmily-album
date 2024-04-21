@@ -1,0 +1,23 @@
+.post-container {
+  width: 400px;
+}
+
+.post-photo {
+  display: block;
+  width: 100%;
+}
+
+.post-stats {
+  display: flex;
+  justify-content: flex-start;
+  padding: 12px 0;
+  cursor: default ;
+}
+.post-rating-button {
+  margin-right: 6px;
+  cursor: pointer;
+  color: rgb(165, 147, 147);
+}
+.post.post-rating-button > .post-rating.count{
+  color: rgba(255, 0, 0, 0.461)
+}

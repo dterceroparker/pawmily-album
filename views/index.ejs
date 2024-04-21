@@ -1,8 +1,10 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/posts/root.css">
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <div class="log-in">  
+  <h2>Welcome, <%= user ? user.profile.name : "friend!" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -12,10 +14,20 @@
     </div>
   <% } %>
   <% if (!user) { %>
-    <h2>Please log in with Google button in the nav!</h2>
+    <h2>Please sign in with Google on the top left!</h2> 
   <% } %>
+  </div>
+  <div class="pawmily">
+    <h3 class="what">What's PawMily?</h3>
+    <br><br>
+    <p>Adventure down pet memory lane!</p>
+    <br><br>
+    <p>Filter posts based on pet age!</p>
+    <br><br>
+    <p>Members interact with your posts via likes and comments!</p>
+    <br><br>
+    <p>Add free!</p>
+    <br><br>
+  </div>
 </main>
-<div>
-  <h3></h3>
-</div>
 <%- include('./partials/footer') %>

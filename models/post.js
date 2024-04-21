@@ -13,12 +13,15 @@ const postSchema = new Schema({
   author: {type: Schema.Types.ObjectId, ref: 'Profile'},
   stage: {
     type: String,
-    enum: ['Puppy', 'Adult', 'Senior']
+    enum: ['Puppy', 'Adult', 'Sage']
 },
   photo: String,
   description: String,
   date: Date,
-  likes: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
+  likes: [{
+    type: Schema.Types.ObjectId, ref: 'Profile',
+    // let like = localStorage.getItem
+  }],
   comments: [commentSchema]
 }, {
   timestamps: true

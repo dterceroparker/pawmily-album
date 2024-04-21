@@ -1,4 +1,4 @@
-//Ben Manley's Code//
+//-------------> Instructor Ben Manley's Code for Date Object <-------------//
 const dateInputEl = document.getElementById('date-input')
 const hiddenDateInputEl = document.getElementById('hidden-date')
 
@@ -13,7 +13,13 @@ window.addEventListener('load', function() {
   hiddenDateInputEl.value = localISOTime
 })
 
+//-------------> Likes <-------------//
 
+
+
+
+
+//-------------> Sidebar <-------------//
 // let menuBtn = document.getElementById('menu-btn');
 // let sidebar = document.querySelector('.sidebar');
 

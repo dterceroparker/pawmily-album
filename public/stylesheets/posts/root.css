@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+
+.log-in {
+  align-content: space-between;
+}
+
+.what {
+  align-self: self-start;
+}
