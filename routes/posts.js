@@ -4,8 +4,11 @@ import * as postsCtrl from '../controllers/posts.js'
 
 const router = Router()
 
-//GET localhost:3000/posts/new
 router.get('/new', isLoggedIn, postsCtrl.new) 
+
+router.post('/', isLoggedIn, postsCtrl.create)
+
+router.get('/:postId', isLoggedIn, postsCtrl.show)
 
 export {
   router

@@ -52,4 +52,6 @@ The returning home app offers:
 - [x] [markdown-badges](https://github.com/Ileriayo/markdown-badges) <br />
 - [x] [Pure CSS Chalkboard](https://gist.github.com/craigiswayne/58938f6e7c8492673f97) <br />
 
-- [x] (https://www.youtube.com/watch?v=uy1tgKOnPB0&t=646s)
+- [x] [Build A Responsive Sidebard Menu](https://www.youtube.com/watch?v=uy1tgKOnPB0&t=646s) <br />
+
+- [x] [Responsive Side Nav Bar](https://www.youtube.com/watch?v=puOJox9p_YE&t=399s) <br />
