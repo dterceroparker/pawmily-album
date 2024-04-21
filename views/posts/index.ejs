@@ -1,0 +1,30 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="stylesheets/posts/index.css">
+<script defer src="/javascripts/javascript.js"></script>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <!-- <h2> post.stage %></h2> -->
+
+  <div class="posts-container">
+    <% posts.forEach(post => { %>
+      <div class="post-card">
+        <h3><%= post.stage %> - Author: <img src="<%= post.author.avatar %>" alt="user profile image"><%= post.author.name %></h2>
+        <p><%= post.content %></p>
+      </div>
+
+        <div class="button-container">
+          <% if (post.author._id.equals(user.profile._id)) { %>
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+              <button>Delete 🗑️</button>
+            </form>
+          <% } %>
+          <a href="/posts/<%= post._id %>"><button class="details-button">See Post 🔎</button></a>
+      </div>
+    <% }) %>
+ </div>
+
+</main>
+
+<%- include('../partials/footer') %>

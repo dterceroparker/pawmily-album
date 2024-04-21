@@ -37,8 +37,24 @@ function show(req, res) {
   })
 }
 
+function index(req, res) {
+  Post.find({})
+  .populate('author')
+  .then(posts => {
+    res.render('posts/index', {
+      title: 'All Posts',
+      posts: posts
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newPost as new,
   create,
   show,
+  index
 }
