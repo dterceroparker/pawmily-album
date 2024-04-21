@@ -11,19 +11,20 @@
     <% posts.forEach(post => { %>
       <div class="post-card">
         <h3><%= post.stage %> - Author: <img src="<%= post.author.avatar %>" alt="user profile image"><%= post.author.name %></h2>
-        <p><%= post.content %></p>
+          <img class="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+          <button id="like-button"><span class="post-rating-button material-icons-outlined">favorite</span></button>
+          <h4><%= post.likes.length %></h6>
       </div>
-
-        <div class="button-container">
-          <% if (post.author._id.equals(user.profile._id)) { %>
-            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+      <div class="button-container">
+        <% if (post.author._id.equals(user.profile._id)) { %>
+          <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
               <button>Delete 🗑️</button>
             </form>
-          <% } %>
-          <a href="/posts/<%= post._id %>"><button class="details-button">See Post 🔎</button></a>
-      </div>
+            <% } %>
+            <a href="/posts/<%= post._id %>"><button class="details-button">See Post 🔎</button></a>
+          </div>
     <% }) %>
- </div>
+  </div>
 
 </main>
 

@@ -52,9 +52,23 @@ function index(req, res) {
   })
 }
 
+function addLikes(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    post.likes.push(req.user.profile._id)
+    post.save()
+    res.redirect(`/posts/${post._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newPost as new,
   create,
   show,
-  index
+  index,
+  addLikes,
 }

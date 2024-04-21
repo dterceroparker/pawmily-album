@@ -18,10 +18,7 @@ const postSchema = new Schema({
   photo: String,
   description: String,
   date: Date,
-  likes: [{
-    type: Schema.Types.ObjectId, ref: 'Profile',
-    // let like = localStorage.getItem
-  }],
+  likes: [{type: Schema.Types.ObjectId, ref: 'Profile'}],
   comments: [commentSchema]
 }, {
   timestamps: true

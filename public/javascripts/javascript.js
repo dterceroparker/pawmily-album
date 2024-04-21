@@ -13,9 +13,6 @@ window.addEventListener('load', function() {
   hiddenDateInputEl.value = localISOTime
 })
 
-//-------------> Likes <-------------//
-
-
 
 
 

@@ -13,11 +13,11 @@
   padding: 12px 0;
   cursor: default ;
 }
-.post-rating-button {
+.like-button {
   margin-right: 6px;
   cursor: pointer;
   color: rgb(165, 147, 147);
 }
-.post.post-rating-button > .post-rating.count{
+.like-button > .show-likes{
   color: rgba(255, 0, 0, 0.461)
 }

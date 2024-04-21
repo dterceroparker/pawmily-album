@@ -12,6 +12,9 @@ router.post('/', isLoggedIn, postsCtrl.create)
 
 router.get('/:postId', isLoggedIn, postsCtrl.show)
 
+router.patch('/:postId/likes', isLoggedIn, postsCtrl.addLikes)
+
+
 export {
   router
 }
