@@ -22,13 +22,19 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  Post.findById(req.params.postId)
-  .populate('author')
-  .populate('comments.author')
-  .then(post => {
-    res.render('posts/show', {
-      title: 'My Album',
-      post
+  Profile.findById(req.params.profileId)
+  .then(profile => {
+    Post.find({author: profile._id})
+    .populate('author')
+    .then(post => {
+      res.render('posts/show', {
+        title: 'My Album',
+        post
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
     })
   })
   .catch(err => {
