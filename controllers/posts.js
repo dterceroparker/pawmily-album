@@ -95,6 +95,46 @@ function deletePost(req, res) {
   })
 }
 
+function edit(req, res) {
+  Post.findById(req.param.postId)
+  .then(post => {
+    if (post.author._id.equals(req.user.profile._id)) {
+      Post.edit(req.params.postId)
+      .then(() => {
+        res.redirect(`posts/${post._id}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/posts')
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('posts')
+  })
+}
+
+function update(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    if (post.author._id.equals(req.user.profile._id)) {
+      taco.updateOne(req.body)
+      .then(()=> {
+        res.redirect(`/posts/${post._id}`)
+      })
+    } else {
+      throw new Error('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/tacos`)
+  })
+}
+
 function addComment(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
@@ -134,6 +174,8 @@ function deleteComment(req, res) {
   })
 }
 
+
+
 export {
   newPost as new,
   create,
@@ -142,5 +184,7 @@ export {
   addLikes,
   deletePost as delete,
   addComment,
-  deleteComment
+  deleteComment,
+  edit,
+  update
 }

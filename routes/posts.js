@@ -12,6 +12,10 @@ router.post('/', isLoggedIn, postsCtrl.create)
 
 router.get('/:postId', isLoggedIn, postsCtrl.show)
 
+router.put('/:postId', isLoggedIn, postsCtrl.update)
+
+router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
+
 router.delete('/:postId', isLoggedIn, postsCtrl.delete)
 
 router.patch('/:postId/likes', isLoggedIn, postsCtrl.addLikes)
