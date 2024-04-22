@@ -1,4 +1,5 @@
 import { Post } from "../models/post.js";
+import { Profile } from "../models/profile.js";
 
 function newPost(req, res) {
     let offset = new Date().getTimezoneOffset() * 60000
@@ -22,20 +23,13 @@ function create(req, res) {
 }
 
 function show(req, res) {
-  Profile.findById(req.params.profileId)
-  .then(profile => {
-    Post.find({author: profile._id})
-    .populate('author')
-    .populate('comments.author')
-    .then(post => {
-      res.render('posts/show', {
-        title: 'Post Details',
-        post
-      })
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/')
+  Post.findById(req.params.postId)
+  .populate('author')
+  .populate('comments.author')
+  .then(post => {
+    res.render('posts/show', {
+      title: 'Post Details',
+      post
     })
   })
   .catch(err => {
@@ -43,6 +37,30 @@ function show(req, res) {
     res.redirect('/')
   })
 }
+
+//profile show function
+// function show(req, res) {
+//   Profile.findById(req.params.profileId)
+//   .then(profile => {
+//     Post.find({author: profile._id})
+//     .populate('author')
+//     .populate('comments.author')
+//     .then(post => {
+//       res.render('posts/show', {
+//         title: 'Post Details',
+//         post
+//       })
+//     })
+//     .catch(err => {
+//       console.log(err)
+//       res.redirect('/')
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
 
 function index(req, res) {
   Post.find({})
@@ -75,11 +93,10 @@ function addLikes(req, res) {
 function deletePost(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
-    if (post.author._id.equals(req.user.profile._id)) {
+    if (post.author.equals(req.user.profile._id)) {
       Post.findByIdAndDelete(req.params.postId)
-      //post.remove(req.params.postId)//
       .then(() => {
-        res.redirect(`posts/${post._id}`)
+        res.redirect("/posts")
       })
       .catch(err => {
         console.log(err)
@@ -98,7 +115,7 @@ function deletePost(req, res) {
 function edit(req, res) {
   Post.findById(req.param.postId)
   .then(post => {
-    if (post.author._id.equals(req.user.profile._id)) {
+    if (post.author.equals(req.user.profile._id)) {
       Post.edit(req.params.postId)
       .then(() => {
         res.redirect(`posts/${post._id}`)
@@ -120,8 +137,8 @@ function edit(req, res) {
 function update(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
-    if (post.author._id.equals(req.user.profile._id)) {
-      taco.updateOne(req.body)
+    if (post.author.equals(req.user.profile._id)) {
+      post.updateOne(req.body)
       .then(()=> {
         res.redirect(`/posts/${post._id}`)
       })
@@ -131,7 +148,7 @@ function update(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect(`/tacos`)
+    res.redirect(`/posts`)
   })
 }
 
@@ -173,8 +190,6 @@ function deleteComment(req, res) {
     res.redirect('/')
   })
 }
-
-
 
 export {
   newPost as new,

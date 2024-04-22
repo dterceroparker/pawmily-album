@@ -1,0 +1,8 @@
+<!-- likes -->
+
+<div class="rating-selected">
+  <form method="PATCH" action="/posts/<%= post._id %>/likes/<%= likes._id%>">
+    <button id="like-button"><span class="post-rating-button material-icons-outlined">favorite</span></button>
+    <span class="show-likes"><%= post.likes.length %></span>
+  </form>
+</div>

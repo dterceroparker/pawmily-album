@@ -17,12 +17,7 @@
       </div>
       <div class="post-stats">
         <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
-        <div class="rating-selected">
-          <form method="PATCH" action="/posts/<%= post._id %>/likes/<%= likes._id%>">
-            <button id="like-button"><span class="post-rating-button material-icons-outlined">favorite</span></button>
-            <span class="show-likes"><%= post.likes.length %></span>
-          </form>
-        </div>
+       
         <div class="button-container">
           <% if (post.author._id.equals(user.profile._id)) { %>
             <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
