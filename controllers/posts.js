@@ -26,10 +26,11 @@ function show(req, res) {
   .then(profile => {
     Post.find({author: profile._id})
     .populate('author')
+    .populate('comments.author')
     .then(post => {
       res.render('posts/show', {
-        title: 'My Album',
-        post,
+        title: 'Post Details',
+        post
       })
     })
     .catch(err => {
@@ -75,8 +76,8 @@ function deletePost(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
     if (post.author._id.equals(req.user.profile._id)) {
-      post.remove
-      post.save()
+      Post.findByIdAndDelete(req.params.postId)
+      //post.remove(req.params.postId)//
       .then(() => {
         res.redirect(`posts/${post._id}`)
       })
@@ -94,6 +95,45 @@ function deletePost(req, res) {
   })
 }
 
+function addComment(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    req.body.author = req.user.profile._id
+    post.comments.push(req.body)
+    post.save()
+    .then(()=> {
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function deleteComment(req, res) {
+  Post.findById(req.params.postId)
+  .then(post => {
+    post.comments.remove({_id: req.params.commentId})
+    post.save()
+    .then(() => {
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   newPost as new,
   create,
@@ -101,4 +141,6 @@ export {
   index,
   addLikes,
   deletePost as delete,
+  addComment,
+  deleteComment
 }

@@ -32,6 +32,33 @@
           <% } %>
         </div>
       </div>
+      <form method="POST" action="/posts/<%= post._id %>/comments">
+        <textarea type="text" name="content" placeholder="Show some love ..."></textarea>
+        <button type="submit" class="comment-button">Add Comment</button>
+      </form>
+      <% if (post.comments.length) { %>
+        <h4>Comments</h4>
+        <ul>
+          <% post.comments.forEach(comment => { %>
+            <li>
+              <%= comment.content %> - 
+              <img 
+                class="avatar" 
+                src="<%= comment.author.avatar %>" 
+                alt="comment author avatar"
+              >
+              <%= comment.author.name %> 
+              <% if (comment.author._id.equals(user.profile._id)) { %>
+                <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                  <button type="submit">🗑️</button>
+                </form> 
+              <% } %>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <h4>No comments yet 🤍</h4>
+      <% } %>
     </div>
   </div>
   

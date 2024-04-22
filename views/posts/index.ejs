@@ -9,10 +9,15 @@
     <% posts.forEach(post => { %>
       <div class="post-card">
         <h4><%= post.stage %></h4> 
-        <h4>Author:</h4>  
-        <img id="avatar" src="<%= post.author.avatar %>" alt="user profile image">
+        <h4>Author:</h4>
+        <img id="avatar" 
+          src="<%= post.author.avatar %>" 
+          alt="user profile image">
           <h4><%= post.author.name %></h4>
-          <img class="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+          <img 
+            class="post-photo" 
+            src="<%= post.photo %>" 
+            alt="A picture of a sweet pet">
           <div class="button-container">
             <button id="like-button"><span class="post-rating-button material-icons-outlined">🤍</span></button>
             <h4><%= post.likes.length %></h4>
