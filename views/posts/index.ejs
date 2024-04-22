@@ -8,16 +8,18 @@
   <div class="posts-container">
     <% posts.forEach(post => { %>
       <div class="post-card">
-        <h4><%= post.stage %></h4> 
-        <h4>Author:</h4>
-        <img id="avatar" 
+        <div class="post-info"><h4><%= post.stage %></h4></div> 
+        <div class="post-info"><h4>Author:</h4></div>
+        <div class="post-info">
+          <img id="avatar" 
           src="<%= post.author.avatar %>" 
-          alt="user profile image">
-          <h4><%= post.author.name %></h4>
+          alt="user profile image"></div>
+        <div class="post-info"><h4><%= post.author.name %></h4></div>
+        <div class="post-info">
           <img 
-            class="post-photo" 
+            id="post-photo" 
             src="<%= post.photo %>" 
-            alt="A picture of a sweet pet">
+            alt="A picture of a sweet pet"></div>
           <div class="button-container">
             <button id="like-button"><span class="post-rating-button material-icons-outlined">🤍</span></button>
             <h4><%= post.likes.length %></h4>

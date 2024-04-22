@@ -7,9 +7,11 @@
   height: 40px;
   margin-right: 8px;
 }
-.post-photo {
-  display: block;
-  width: 100%;
+#post-photo {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 8px;
 }
 .post-stats {
   display: flex;

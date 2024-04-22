@@ -12,18 +12,20 @@
     <div post="post-card">
       <div class="author">
         <h3><%= post.stage %> - Author: <img src="<%= post.author.avatar %>" alt="user profile image"><%= post.author.name %></h3>
-        <img class="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+        <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
         <p><%= post.content %></p>
       </div>
       <div class="post-stats">
         <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
-       
+      
         <div class="button-container">
           <% if (post.author._id.equals(user.profile._id)) { %>
             <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-              <button class="edit-button">Edit ✎</button>
               <button class="delete-button">Delete 🗑️</button>
             </form>
+            <a href="/posts/<%= post._id %>/edit">
+              <button class="edit-button">Edit ✎</button>
+            </a>
           <% } %>
         </div>
       </div>

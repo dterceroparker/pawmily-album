@@ -1,0 +1,43 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="stylesheets/posts/new.css">
+<script defer src="/javascripts/javascript.js"></script>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <div class="form-container">
+    <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+      <label for="stage-input" name="stage">Age:</label>
+      <select name="stage" id="stage-type">
+        <option value="Puppy">Puppy</option>
+        <option value="Adult">Adult</option>
+        <option value="Sage">Sage</option>
+      </select>
+
+      <label>
+        Photo:
+        <input 
+        type="string"
+        name="photo"
+        value="<%= post.photo %>"
+        >
+      </label>
+
+      <label>
+        Description:
+        <input 
+        type="text"
+        name="description"
+        value="<%= post.description %>"
+        autocomplete="off"
+        >
+      </label>
+
+      <label>
+        <button type="submit">Update Post</button>
+      </label>
+    </form>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
