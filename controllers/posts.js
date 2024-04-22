@@ -183,8 +183,8 @@ export {
   index,
   addLikes,
   deletePost as delete,
+  update,
   addComment,
   deleteComment,
-  edit,
-  update
+  edit
 }
