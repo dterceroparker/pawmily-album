@@ -23,3 +23,15 @@ window.addEventListener('load', function() {
 // menuBtn.onclick = function() {
 //   sidebar.classList.toggle('active')
 // }
+
+const handleAddLike = async () => {
+  const res = await post.addLike(id)
+
+}
+
+// post.author._id === post.user.profile &&
+
+// if post.likes.includes(user.profile)
+// const likeButton = {
+//   <button onClick={props.handleAddLike}>Like</button>
+// }

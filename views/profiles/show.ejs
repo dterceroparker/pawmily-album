@@ -13,7 +13,7 @@
   <% if (posts.length) { %>
     <% posts.forEach(post => { %>
       <a href="/posts/ <%= post._id %>"></a>
-        
+        <h2><%= post.author.name %></h2>
         <div class="post-card">
           <h4>Memory Lane: <%= post.stage %></h4>
           <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">

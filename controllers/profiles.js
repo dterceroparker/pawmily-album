@@ -1,7 +1,7 @@
 import { Profile } from '../models/profile.js'
 import { Post } from "../models/post.js";
 
-function show(req, res) {
+function showProfilePosts(req, res) {
   Profile.findById(req.user.profile._id)
   .then(profile => {
     Post.find({author: profile._id})
@@ -27,5 +27,5 @@ function show(req, res) {
 
 
 export {
-  show,
+  showProfilePosts,
 }
