@@ -16,18 +16,12 @@ The returning home app offers:
 - [x] Day night mode
 - [x] Purple (wisdom) and blue (trust) color tone 
 ---
-[Project Planning Material Link](https://docs.google.com/document/d/1xvFRDjoEiwNqBVws82SyiS03iw69sdkwwq9PnPkq3C4/edit)
+[Project Planning Material Link](https://trello.com/b/1ixhu1oN/pawmily-album)
 
 ---
 
+`Icebox Items`
 
-|   `Technology`     | `Attributions`|    `Icebox Items`          |
-|:------------------:|:-------------:|:--------------------------:|
-| CSS       |*freesound.org*| sources links|
-| HTML               |*favicon.cc*   | CSS element > usage        |
-| JavaScript                |*Shannon Crabill - breathing animation*    | CSS display: flex use|
-| VS Code                   |*lauryndbrown CSS3 cloud*              |  JS timer function          |
-| Netlify                    | *ileriayo badge list*
 ***
  ### `Technology` 
 
