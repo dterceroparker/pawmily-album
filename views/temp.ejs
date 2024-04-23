@@ -39,3 +39,70 @@ function index(req, res) {
 <% } else { %>
   <h4>No comments yet 🤍</h4>
 <% } %>
+
+
+<!-- sidebar -->
+<% if (!user) { %>
+  <script defer src="https://accounts.google.com/gsi/client"></script>
+<% } %>
+</head>
+<body>
+<div class="sidebar">
+  <% if (user) { %>
+    <img id="avatar" src="<%= user.profile.avatar %>"/>
+    <p>Welcome <%= user.profile.name %>!</p>
+      <ul>
+        <li>
+          <a href="#" class="logo">
+          <i class="fas fa-solid fa-duotone fa-2x fa-paw"></i>
+          <span class="nav-item">PawMily Album</span>
+          </a>
+        </li>
+        <li>
+          <a href="/auth/logout" class="right">
+          <button type="logout-btn">Logout</button>
+          </a>
+        </li>
+        <li>
+          <a href="/profiles/<%= user.profile._id %>">
+          <i class="fas fa-solid fa-house"></i>
+          <span class="nav-item">My Album</span>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown" href="/posts/">
+          <i class="fas fa-solid fa-square-caret-down"></i>
+          <label for="stage">Explore</label>
+          <div class="nav-item" name="stage" id="stage">
+            <a href="#">Puppy</a>
+            <a href="#">Adult</a>
+            <a href="#">Sage</a>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a href="/posts/new">
+          <i class="fas fa-solid fa-flie-pen"></i>
+          <span class="nav-item">New Post</span>
+        </a>
+        </li>
+      </ul>
+  <% } else { %>
+    <div 
+      id="g_id_onload"
+      data-client_id="<%= googleClientID %>"
+      data-login_uri="/auth/google"
+      data-auto_prompt="false"
+      data-prompt_parent_id="g_id_onload"
+    ></div>
+    <div 
+      class="g_id_signin right"
+      data-type="standard"
+      data-size="large"
+      data-theme="outline"
+      data-text="sign_in_with"
+      data-shape="rectangular"
+      data-logo_alignment="left"
+    ></div>
+  <% } %>
+</div>

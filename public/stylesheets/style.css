@@ -28,6 +28,9 @@
   width: 280px;
   transition: all 0.5s ease;
 }
+.sidebar:hover .logo span {
+  display: block;
+}
 .right {
   margin-left: auto;
 }
@@ -42,6 +45,7 @@
   padding-left: 15px;
   font-size: 1rem;
   text-transform: uppercase;
+  display: none;
 }
 .logout-btn {
   border-radius: 20px;
