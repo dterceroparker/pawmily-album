@@ -18,7 +18,7 @@ router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
 
 router.delete('/:postId', isLoggedIn, postsCtrl.delete)
 
-router.post('/:postId/likes', isLoggedIn, postsCtrl.addLike)
+
 
 router.post('/:postId/comments', isLoggedIn, postsCtrl.addComment)
 

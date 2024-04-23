@@ -31,7 +31,7 @@
         </div>
       </div>
       <form method="POST" action="/posts/<%= post._id %>/comments">
-        <textarea type="text" name="content" cols="14" rows="1" placeholder="Show some love ..."></textarea>
+        <textarea type="text" name="content" cols="20" rows="2" placeholder="Show some love ..."></textarea>
         <button type="submit" class="comment-button">Add Comment</button>
       </form>
       <% if (post.comments.length) { %>

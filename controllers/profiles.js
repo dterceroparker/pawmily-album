@@ -24,8 +24,6 @@ function showProfilePosts(req, res) {
   })
 }
 
-
-
 export {
   showProfilePosts,
 }

@@ -38,20 +38,6 @@ function show(req, res) {
   })
 }
 
-// function index(req, res) {
-//   Post.find({})
-//   .populate('author')
-//   .then(posts => {
-//     res.render('posts/index', {
-//       title: 'Community Posts',
-//       posts: posts
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
 
 function index(req, res) {
   if (req.query.type === "puppy") {
@@ -66,60 +52,47 @@ function index(req, res) {
       console.log(err)
       res.redirect('/')
     })
-  } else {
-  Post.find({})
-  .populate('author')
-  .then(posts => {
-    res.render('posts/index', {
-      title: 'All Posts',
-      posts: posts
+  } 
+  if (req.query.type === "adult") {
+    Post.find({stage: "Adult"})
+    .then(posts => {
+      res.render('posts/index', {
+        title: 'Adult Posts',
+        posts 
+      })
     })
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
-}
-}
-
-// if (req.query.type === "puppy") {
-//   Post.find({stage: "Puppy"})
-//   .then(posts => {
-//     res.render('posts/index', {
-//       title: 'Puppy Posts',
-//       posts 
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
-
-// function addLike(req, res) {
-//   Post.findById(req.params.postId)
-//   .then(post => {
-//     post.likes.push(req.user.profile._id)
-//     post.save()
-//     res.redirect(`/posts/${post._id}`)
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
-
-function addLike(req, res) {
-  try {
-    Post.findByIdAndUpdate(req.params.postId,
-    { $push: { likes: req.user.profile }},
-    )
-
-  } catch (error) {
-
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  } 
+  if (req.query.type === "sage") {
+    Post.find({stage: "Sage"})
+    .then(posts => {
+      res.render('posts/index', {
+        title: 'Sage Posts',
+        posts 
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  } else {
+    Post.find({})
+    .populate('author')
+    .then(posts => {
+      res.render('posts/index', {
+        title: 'All Posts',
+        posts: posts
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
   }
 }
-
 
 function deletePost(req, res) {
   Post.findById(req.params.postId)
@@ -223,7 +196,6 @@ export {
   create,
   show,
   index,
-  addLike,
   deletePost as delete,
   update,
   addComment,
