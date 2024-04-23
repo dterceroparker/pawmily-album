@@ -3,8 +3,9 @@
 <script defer src="/javascripts/javascript.js"></script>
 <%- include('../partials/nav') %>
 
+<h1><%= title %></h1>
+
 <main>
-  <h1><%= title %></h1>
   <div class="posts-container">
     <% posts.forEach(post => { %>
       <div class="post-card">

@@ -12,6 +12,16 @@
   width: 50px;
   height: 50px;
 }
+.log-in-message {
+  position: relative;
+  background: #00aabb;
+  border-radius: .4em;
+	border: 3px solid rgba(47, 0, 255, 0.366);
+	/* border-right-color: #00aabb; */
+	/* margin-top: -10px;
+	margin-left: -20px; */
+  }
+
 .sidebar {
   position: absolute;
   top: 0;

@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/posts/root.css">
 <%- include('./partials/nav') %>
 
+<h1>Welcome, <%= user ? user.profile.name : "friend!" %></h1>
 <main>
   <div class="log-in">  
-  <h2>Welcome, <%= user ? user.profile.name : "friend!" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -14,7 +14,7 @@
     </div>
   <% } %>
   <% if (!user) { %>
-    <h2>Please sign in with Google on the top left!</h2> 
+    <h3 class="log-in-message">Please sign in with Google on the top left!</h3> 
   <% } %>
   </div>
   <div class="pawmily">

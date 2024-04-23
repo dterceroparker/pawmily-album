@@ -38,7 +38,35 @@ function show(req, res) {
   })
 }
 
+// function index(req, res) {
+//   Post.find({})
+//   .populate('author')
+//   .then(posts => {
+//     res.render('posts/index', {
+//       title: 'Community Posts',
+//       posts: posts
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
+
 function index(req, res) {
+  if (req.query.type === "puppy") {
+    Post.find({stage: "Puppy"})
+    .then(posts => {
+      res.render('posts/index', {
+        title: 'Puppy Posts',
+        posts 
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  } else {
   Post.find({})
   .populate('author')
   .then(posts => {
@@ -52,6 +80,21 @@ function index(req, res) {
     res.redirect('/')
   })
 }
+}
+
+// if (req.query.type === "puppy") {
+//   Post.find({stage: "Puppy"})
+//   .then(posts => {
+//     res.render('posts/index', {
+//       title: 'Puppy Posts',
+//       posts 
+//     })
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
 
 // function addLike(req, res) {
 //   Post.findById(req.params.postId)

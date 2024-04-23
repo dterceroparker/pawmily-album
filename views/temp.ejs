@@ -106,3 +106,21 @@ function index(req, res) {
     ></div>
   <% } %>
 </div>
+
+function index(req, res) {
+  Post.find{}
+  .populate('author')
+  .then(posts => {
+    if (req.query.type === "puppy") {
+      Post.find({stage: "Puppy"})
+    }
+    res.render('posts/index', {
+      title: 'All Posts',
+      posts: posts
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
