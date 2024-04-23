@@ -6,3 +6,36 @@
     <span class="show-likes"><%= post.likes.length %></span>
   </form>
 </div>
+
+function index(req, res) {
+  Profile.find({})
+  .then(profiles => {
+    res.render('profiles/index', {
+      profiles,
+			title: "🐱"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+<% if (post.comments.length) { %>
+  <h4>Comments</h4>
+  <ul>
+    <% post.comments.forEach(comment => { %>
+      <li>
+        <%= comment.content %> - 
+        <img 
+          class="avatar" 
+          src="<%= comment.author.avatar %>" 
+          alt="comment author avatar"
+        >
+        <%= comment.author.name %> 
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <h4>No comments yet 🤍</h4>
+<% } %>

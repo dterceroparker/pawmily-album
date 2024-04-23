@@ -1,0 +1,43 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="stylesheets/posts/show.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script defer src="/javascripts/javascript.js"></script>
+<%- include('../partials/nav') %>
+
+<h1><%= title %></h1>
+
+<h3>Nice to see you, <%= user.profile.name %>!</h3>
+
+<main>
+  <div class="posts-list">
+  <% if (posts.length) { %>
+    <% posts.forEach(post => { %>
+      <a href="/posts/ <%= post._id %>"></a>
+        
+        <div class="post-card">
+          <h4>Memory Lane: <%= post.stage %></h4>
+          <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+          <p><%= post.content %></p>
+        </div>
+
+        <div class="post-stats">
+          <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
+        </div>
+        <%= post.comments.length %>
+        <%= post.comments.content %> 
+    <% }) %> 
+    <% } else { %>
+      <h4>No posts yet 🤍</h4>
+    <% } %>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

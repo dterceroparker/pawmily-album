@@ -38,30 +38,6 @@ function show(req, res) {
   })
 }
 
-//profile show function
-// function show(req, res) {
-//   Profile.findById(req.params.profileId)
-//   .then(profile => {
-//     Post.find({author: profile._id})
-//     .populate('author')
-//     .populate('comments.author')
-//     .then(post => {
-//       res.render('posts/show', {
-//         title: 'Post Details',
-//         post
-//       })
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.redirect('/')
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/')
-//   })
-// }
-
 function index(req, res) {
   Post.find({})
   .populate('author')
@@ -77,7 +53,7 @@ function index(req, res) {
   })
 }
 
-function addLikes(req, res) {
+function addLike(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
     post.likes.push(req.user.profile._id)
@@ -192,7 +168,7 @@ export {
   create,
   show,
   index,
-  addLikes,
+  addLike,
   deletePost as delete,
   update,
   addComment,
