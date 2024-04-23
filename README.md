@@ -41,18 +41,14 @@ The returning home app offers:
 ##### `Attributions Links`
 
 - [x] [coolors.co](https://coolors.co/gradients) <br />
-- [x] [CSS Breathing Animation](https://dev.to/scrabill/focused-breathing-a-css-animation-to-help-with-meditation-and-focused-breathing-exercises-dob) <br />
-- [x] [CSS3 Clouds](https://lauryndbrown.github.io/2017/06/08/creating-clouds-in-css.html) <br />
-- [x] [CSS static starfield](https://stackoverflow.com/questions/24662684/pure-css-static-starfield) <br />
-- [x] [DirtyMarkup Beautifier](https://www.10bestdesign.com/dirtymarkup/js/) <br />
+
 - [x] [Favicon.cc](https://www.favicon.cc/) <br />
-- [x] [fonts.google](https://fonts.google.com/specimen/Dancing+Script)
-- [x] [freesound.org](https://freesound.org/people/klankbeeld/sounds/633954/) <br />
-- [x] [GitHub Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) <br />
+- [x] [fonts.google](https://fonts.google.com/specimen/Dancing+Script) <br />
+
 - [x] [markdown-badges](https://github.com/Ileriayo/markdown-badges) <br />
-- [x] [Pure CSS Chalkboard](https://gist.github.com/craigiswayne/58938f6e7c8492673f97) <br />
 
 - [x] [Build A Responsive Sidebard Menu](https://www.youtube.com/watch?v=uy1tgKOnPB0&t=646s) <br />
 - [x] [Responsive Side Nav Bar](https://www.youtube.com/watch?v=puOJox9p_YE&t=399s) <br />
 - [x] [Add Rating Buttons](https://youtu.be/20tJJAI6_oA?si=FHY0veTFNTHkk9Ys) <br />
 - [x] [Google Material Symbols](https://fonts.google.com/icons) <br />
+- [x] [Hoot - Likes (Bonus](https://youtu.be/URaAMXYDc2U?si=Gtje_x21Y7D8V8Cp)
