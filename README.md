@@ -1,13 +1,13 @@
-# `Returning Home App`
+# `PawMily Album App`
 ***
 
 
-#### [Returning Home App Link](https://returning-home-app.netlify.app)
+#### [PawMily Album App Link](https://pawmily-album.fly.dev/)
 ---
 #### `Description`
 ##### A bootcamp experience inevitably leads us to experience the emotional cycle of change. The combination of facing the "valley of despair" stage whilst the insidious imposter syndrome voice gets louder--all while attempting to learn a completely new language--can make us feel alone in the fog. When faced with doubt, fear, and the strong urge to give up; understanding, support and wisdom can help us embrace and trust the journey. As Buddhist monk Thích Nhất Hạnh says, it is with the breath that we return home to ourselves and to the present moment. 
 ---
-The returning home app offers:
+The PawMily Album app offers:
 
 - [x] Eight seconds of deep breathing 
 - [x] Wisdom from Stoic philosophy, Buddhism, psychologists, a physician and a poet 
