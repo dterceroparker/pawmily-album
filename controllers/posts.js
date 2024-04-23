@@ -53,18 +53,30 @@ function index(req, res) {
   })
 }
 
+// function addLike(req, res) {
+//   Post.findById(req.params.postId)
+//   .then(post => {
+//     post.likes.push(req.user.profile._id)
+//     post.save()
+//     res.redirect(`/posts/${post._id}`)
+//   })
+//   .catch(err => {
+//     console.log(err)
+//     res.redirect('/')
+//   })
+// }
+
 function addLike(req, res) {
-  Post.findById(req.params.postId)
-  .then(post => {
-    post.likes.push(req.user.profile._id)
-    post.save()
-    res.redirect(`/posts/${post._id}`)
-  })
-  .catch(err => {
-    console.log(err)
-    res.redirect('/')
-  })
+  try {
+    Post.findByIdAndUpdate(req.params.postId,
+    { $push: { likes: req.user.profile }},
+    )
+
+  } catch (error) {
+
+  }
 }
+
 
 function deletePost(req, res) {
   Post.findById(req.params.postId)
