@@ -9,13 +9,14 @@
   <div class="post-container">
     <div class="post-card">
       <div class="author">
-        <h4><img id="avatar" src="<%= post.author.avatar %>" alt="user profile image"><%= post.author.name %></h4>
-        <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
-        <br>
-        <textarea><%= post.description %></textarea>
+        <img id="avatar" src="<%= post.author.avatar %>" alt="user profile image">
+        <h4><%= post.author.name %></h4>
       </div>
-      <div class="post-stats">
+        <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
         <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
+        <p class="post-description"><%= post.description %></p>
+      
+      <div class="post-stats">
         <div class="button-container">
           <% if (post.author._id.equals(user.profile._id)) { %>
             <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
@@ -29,30 +30,35 @@
       </div>
       <form method="POST" action="/posts/<%= post._id %>/comments">
         <textarea type="text" name="content" cols="20" rows="2" placeholder="Show some love ..."></textarea>
-        <button type="submit" class="comment-button">Add Comment</button>
+        <br>
+        <button type="submit" class="comment-button">Comment</button>
       </form>
+      
       <% if (post.comments.length) { %>
-        <h4>Comments</h4>
-        <ul>
+        <!-- <h4>Comments</h4> -->
+        <!-- <ul> -->
           <% post.comments.forEach(comment => { %>
-            <li>
-              <%= comment.content %> - 
-              <img 
-                class="avatar" 
+            <div class="comments">
+              <div class="comment">
+              <!-- <li> -->
+                <img 
+                class="comment-image" 
                 src="<%= comment.author.avatar %>" 
                 alt="comment author avatar"
-              >
-              <%= comment.author.name %> 
+                >
+                <p><%= comment.content %> </p>
+              </div>
+            </div>
               <% if (comment.author._id.equals(user.profile._id)) { %>
                 <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                  <button type="submit">🗑️</button>
+                  <button id="delete-comment" type="submit">🗑️</button>
                 </form> 
               <% } %>
-            </li>
+            <!-- </li> -->
           <% }) %>
-        </ul>
+        <!-- </ul> -->
       <% } else { %>
-        <h4>No comments yet 🤍</h4>
+        <h4 class="no-comment">No comments yet 🤍</h4>
       <% } %>
     </div>
   </div>

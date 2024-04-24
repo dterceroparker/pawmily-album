@@ -17,7 +17,7 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 }
 .post-card {
-  border: 100px solid rgba(118, 38, 158, 0.595);
+  border: 1px solid rgba(223, 168, 19, 0.548);
   padding: 24px;
   border-radius: 8px;
   margin-bottom: 32px;
@@ -25,18 +25,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 30vw;
+  margin-top: 0px;
 }
 #avatar {
-  border-radius: 100%;
+  border-radius: 10%;
   width: 70px;
   height: auto;
-  margin-right: 8px;
-  margin-left: 0;
+  box-shadow: 0 15px 50px rgba(228, 206, 8, 0.204);
+  margin-left: 10px;
+  margin-top: 5px;
 }
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+h4 {
+  color:rgba(223, 168, 19, 0.548);
+  margin-left: 10px;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: black;
 
 }
 #post-photo {
@@ -44,11 +54,28 @@
   height: auto;
   border-radius: 8px;
   text-shadow: 2px 2px;
+  box-shadow: 0 15px 50px rgba(228, 206, 8, 0.204);
+}
+h6 {
+  margin-right: 20vw;
+  color:rgba(251, 255, 0, 0.641);
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+.post-description {
+  flex-grow: 1;
+  border-top: .5mm solid rgba(217, 203, 203, 0.225);
+  border-bottom: .5mm solid rgba(217, 203, 203, 0.225);
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: rgba(28, 90, 144, 0.281);
 }
 textarea, ::placeholder {
-  text-shadow: 0 0 1px #140436;
   width: 500px;
-  background-color: rgba(217, 213, 207, 0.064);
+  background-color: rgb(152, 172, 186);
   color: #140436;
 }
 .post-stats {
@@ -58,25 +85,22 @@ textarea, ::placeholder {
   padding: 12px 0;
   cursor: default ;
 }
-.like-button {
-  margin-right: 6px;
-  cursor: pointer;
-  color: rgb(165, 147, 147);
+
+.button-container {
+  display: flex;
+  justify-content:flex-end;
+  margin-left: 21vw;
 }
-.like-button > .show-likes{
-  color: rgba(255, 0, 0, 0.461)
+
+.comment-button {
+  margin-left: 27vw;
+  margin-bottom: 10px;
+}
+
+.no-comment {
+  margin-right: 21vw;
 }
 /* Ben's CSS below */
-.post-card {
-  border: 1px solid rgb(76, 0, 255);
-  padding: 24px;
-  border-radius: 8px;
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 img {
   width: 40px;
@@ -86,21 +110,36 @@ img {
 }
 
 button {
-  background-color: lime;
-  color: #1a1a1a;
-  font-weight: bold;
-  width: 105px;
-  height: 40px;
-  border-radius: 8px;
-  border: none;
+background: hsla(242, 58%, 73%, 1);
+background: linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+background: -moz-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+background: -webkit-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9491E2", endColorstr="#AFF2D8", GradientType=1 );
+width: 90px;
+height: 30px;
+border-radius: 8px;
+box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.5);
 }
-
+button:hover {
+  transform: scale(0.5);
+  transition: transform 2s ease-in-out .5s;
+  -webkit-box-reflect: below 1px 
+    linear-gradient(to bottom, rgba(0,0,0,0.0), 
+    rgba(0,0,0,0.5));
+}
+#delete-comment {
+  width: 40px;
+  height: 20px;
+  margin-left: 31vw;
+  font-weight: bold;
+  background-color: aliceblue;
+  margin-top: 5px;
+}
 .button-container {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: 0 auto; 
+  /* margin: 0 auto;  */
 }
 
 .details-button {
@@ -108,17 +147,39 @@ button {
   margin-left: 16px;
 }
 
-/* .delete-button {
-  margin-bottom: 50px;
-} */
-
-.comment-button {
-  background-color: lightskyblue;
-  margin-top: 16px;
-}
-
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.comments {
+  flex-grow: 1;
+  border-top: .5mm solid rgba(217, 203, 203, 0.225);
+  border-bottom: .5mm solid rgba(217, 203, 203, 0.225);
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: rgba(28, 90, 144, 0.281);
+}
+.comments::-webkit-scrollbar {
+  display: none;
+  opacity: 0;
+  width: 0;
+}
+.comment {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-family: poppins;
+  font-size: 12px;
+  margin: 15px 0;
+
+}
+.comment-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }

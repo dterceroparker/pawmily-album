@@ -181,3 +181,12 @@ function index(req, res) {
   }
   
   router.post('/:postId/likes', isLoggedIn, postsCtrl.addLike)
+
+  .like-button {
+    margin-right: 6px;
+    cursor: pointer;
+    color: rgb(165, 147, 147);
+  }
+  .like-button > .show-likes{
+    color: rgba(255, 0, 0, 0.461)
+  }
