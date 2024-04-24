@@ -1,38 +1,40 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="stylesheets/posts/new.css">
+<link rel="stylesheet" href="/stylesheets/posts/new.css">
 <script defer src="/javascripts/javascript.js"></script>
 <%- include('../partials/nav') %>
 
+<h1><%= title %></h1>
 <main>
-  <h1><%= title %></h1>
   <div class="form-container">
     <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
-      <label for="stage-input" name="stage">Age:</label>
+      <label for="stage-input" name="stage">Life Stage</label>
+      <br>
       <select name="stage" id="stage-type">
         <option value="Puppy">Puppy</option>
         <option value="Adult">Adult</option>
         <option value="Sage">Sage</option>
       </select>
-
+      <br><br>
       <label>
         Photo:
+        <br>
         <input 
         type="string"
         name="photo"
         value="<%= post.photo %>"
         >
       </label>
-
+      <br><br>
       <label>
-        Description:
-        <input 
+        Post Story <br>
+        <textarea cols="50" rows="10"
         type="text"
         name="description"
         value="<%= post.description %>"
         autocomplete="off"
-        >
+        ></textarea>
       </label>
-
+      <br><br>
       <label>
         <button type="submit">Update Post</button>
       </label>

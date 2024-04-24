@@ -162,7 +162,7 @@ a {
   text-transform: uppercase;
 }
 a:hover {
-  background: rgba(0, 0, 255, 0.149);
+  background: rgba(55, 55, 151, 0.317);
 }
 /* The Universal Selector */
 *, /* All elements*/
