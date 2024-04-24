@@ -1,17 +1,59 @@
+main {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; */
+}
+
 .post-container {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
+  background: hsla(213, 77%, 14%, 1);
+  background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
+}
+.post-card {
+  border: 100px solid rgba(118, 38, 158, 0.595);
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #avatar {
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: auto;
   margin-right: 8px;
+
 }
 #post-photo {
-  max-width: 50%;
+  width: 500px;
   height: auto;
   border-radius: 8px;
-  margin-right: 8px;
+}
+textarea {
+  text-shadow: 0 0 1px #140436;
+  width: 500px;
+
 }
 .post-stats {
   display: flex;

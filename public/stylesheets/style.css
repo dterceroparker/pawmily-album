@@ -122,15 +122,15 @@ span {
   text-transform: uppercase;
 }
 a {
-  position: relative;
+  /* position: relative; */
   color: rgb(85, 83, 83);
   font-size: 1rem;
-  display: table;
+  /* display: table; */
   width: 300px;
   padding: 10px
 }
 .fas {
-  position: relative;
+  /* position: relative; */
   width: 70px;
   height: 40px;
   top: 14px;
@@ -138,7 +138,7 @@ a {
   text-align: center;
 }
 .nav-item {
-  position: relative;
+  /* position: relative; */
   top: 12px;
   margin-left: 10px;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
@@ -148,7 +148,7 @@ a {
   text-shadow: -4px 1px #0e0d0d,;
 }
 .nav-btn {
-  position: relative;
+  /* position: relative; */
   top: 12px;
   margin-left: 10px;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
@@ -160,9 +160,19 @@ a {
   padding-left: 15px;
   font-size: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #26c6da;
 }
 a:hover {
   background: rgba(55, 55, 151, 0.317);
+}
+#stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fa0b0b;
 }
 /* The Universal Selector */
 *, /* All elements*/
