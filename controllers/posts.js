@@ -6,7 +6,7 @@ function newPost(req, res) {
     let oneYearFromNow = new Date().setFullYear(new Date().getFullYear() + 1)
     let localISOTime = new Date(oneYearFromNow - offset).toISOString().slice(0, 16)
     res.render('posts/new', {
-      title: 'Add Post'
+      title: 'New Post'
     })
   } 
 

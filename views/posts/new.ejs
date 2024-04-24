@@ -1,37 +1,41 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="stylesheets/posts/new.css">
+<link rel="stylesheet" href="/stylesheets/posts/new.css">
 <script defer src="/javascripts/javascript.js"></script>
 <%- include('../partials/nav') %>
 
+<h1><%= title %></h1>
 <main>
-  <h1><%= title %></h1>
   <div class="form-container">
     <form action="/posts" method="POST">
       <div class="stage-input">
-      <label for="stage-input">Age:</label> 
+      <label for="stage-input">Life Stage</label> 
+      <br>
       <select name="stage" id="stage-type">
         <option value="Puppy">Puppy</option>
         <option value="Adult">Adult</option>
         <option value="Sage">Sage</option>
       </select>
       </div>
-        <br><br>
+        <br>
       <div class="photo-input">
-        <label for="photo-input">Photo: </label>
+        <label for="photo-input">Photo </label>
+        <br>
         <input type="text" name="photo" placeholder="Photo URL">
       </div>
-        <br><br>
+        <br>
       <div class="description-input">
-          <label for="description-input">Description: </label>
-          <textarea placeholder="Please tell us more!" name="description" cols="30" rows="10"></textarea>
+          <label for="description-input">Description </label>
+          <br>
+          <textarea placeholder="Please tell us more!" name="description" cols="50" rows="10"></textarea>
       </div>
-        <br><br>
+        <br>
       <div class="date-input">
-        <label for="date-input">Date:</label>
+        <label for="date-input">Date</label>
+        <br>
         <input type="datetime-local" name="date" id="date-input">
         <input type="datetime-local" id="hidden-date" name="currentLocalDateTime" hidden>
       </div>
-        <br><br>
+        <br>
       <div class="publish-btn">
         <button type="submit">Publish Post</button>
       </div>

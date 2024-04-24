@@ -1,12 +1,33 @@
-form {
-  width: 25%;
+.form-container {
   display: flex;
   flex-direction: column;
+  border: darkblue;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
+  background: hsla(213, 77%, 14%, 1);
+
+background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 }
 
 input, textarea {
   margin-top: 8px;
   margin-bottom: 16px;
+  color: rgb(4, 7, 107);
+  width: 300px;
 }
 
 button {

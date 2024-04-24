@@ -50,3 +50,5 @@ The PawMily Album app offers:
 - [x] [Add Rating Buttons](https://youtu.be/20tJJAI6_oA?si=FHY0veTFNTHkk9Ys) <br />
 - [x] [Google Material Symbols](https://fonts.google.com/icons) <br />
 - [x] [Hoot - Likes (Bonus](https://youtu.be/URaAMXYDc2U?si=Gtje_x21Y7D8V8Cp)
+- [x] [Rainbow Gradient](https://welearncode.com/rainbow-text/)
+- [x] [Wrap Text Around a Circle - Quick CSS Tips And Tricks](https://www.youtube.com/watch?v=Gws3C4Phs2k)

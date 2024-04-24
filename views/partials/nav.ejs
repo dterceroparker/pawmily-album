@@ -3,45 +3,57 @@
 <% } %>
 </head>
 <body>
+
   <div class="sidebar">
   <% if (user) { %>
-    <img id="avatar" src="<%= user.profile.avatar %>"/>
-    <p>Welcome <%= user.profile.name %>!</p>
+    <img id="sidebar-avatar" src="<%= user.profile.avatar %>"/>
     <ul>
       <li>
-        <a href="#" class="logo">
+        <label id="logo">
           <i class="fas fa-solid fa-duotone fa-2x fa-paw"></i>
           <span class="nav-item">PawMily Album</span>
-        </a>
+        </label>
       </li>
+
       <li>
-        <a href="/auth/logout" class="right">
-          <button type="logout-btn">Logout</button>
-        </a>
-      </li>
-      <li>
-        <a href="/profiles/<%= user.profile._id %>">
-          <i class="fas fa-solid fa-house"></i>
-          <span class="nav-item"><i class="fas fa-dog"></i>My Album</span>
-        </a>
-      </li>
-      <li>
-        <a class="dropdown" href="/posts/">
-          <i class="fas fa-solid fa-square-caret-down"></i>
-          <label for="stage"> Explore</label>
-          
-          <div class="nav-item" name="stage" id="stage">
-            <a href="/posts?type=puppy"><button>Puppy</button></a>
-            <a href="/posts?type=adult"><button>Adult</button></a>
-            <a href="/posts?type=sage"><button>Sage</button></a>
-          </div>
-        </a>
-      </li>
-      <li>
+        <label for="new-post">
         <a href="/posts/new">
           <i class="fas fa-solid fa-flie-pen"></i>
           <span class="nav-item">New Post</span>
         </a>
+      </label>
+      </li>
+
+      <li>
+        <label for="my-album">
+        <a href="/profiles/<%= user.profile._id %>">
+          <i class="fas fa-dog"></i>
+          <span class="nav-item">My Album</span>
+        </a>
+        </label>
+      </li>
+
+      <li>
+        <label for="dropdown">
+        <a class="dropdown" href="/posts/">
+          <i class="fas fa-solid fa-square-caret-down"></i>
+          <span class="nav-item"> Explore All Posts</span>
+          
+          <div name="stage" id="stage">
+            <a href="/posts?type=puppy"><button class="nav-btn">Puppy Posts</button></a>
+            <a href="/posts?type=adult"><button class="nav-btn">Adult Posts</button></a>
+            <a href="/posts?type=sage"><button class="nav-btn">Sage Posts</button></a>
+          </div>
+        </a>
+      </label>
+      </li>
+
+      <li>
+        <label for="logout">
+        <a href="/auth/logout" class="right">
+          <button class="nav-btn" type="logout-btn">Logout</button>
+        </a>
+      </label>
       </li>
     </ul>
   <% } else { %>
@@ -63,4 +75,3 @@
     ></div>
   <% } %>
   </div>
-</body>
