@@ -1,5 +1,5 @@
 <%- include('./partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/posts/root.css">
+<link rel="stylesheet" href="/stylesheets/posts/style.css">
 <%- include('./partials/nav') %>
 
 <h1>Welcome, <%= user ? user.profile.name : "friend!" %></h1>
@@ -7,12 +7,7 @@
 <main>
   <div class="log-in">  
   <% if (user?.profile.avatar) { %>
-    <div>
-      <img id="avatar"
-        src="<%= user.profile.avatar %>"
-        alt="avatar"
-      />
-    </div>
+
   <% } %>
   <% if (!user) { %>
     <h4 class="log-in-message"> ↖️ Please sign in with Google on the top left!</h4>

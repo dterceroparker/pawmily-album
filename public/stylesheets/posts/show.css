@@ -1,11 +1,3 @@
-main {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; */
-}
-
 .post-container {
   display: flex;
   flex-direction: column;
@@ -13,10 +5,6 @@ main {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
   width: 600px;
   padding: 30px;
   box-sizing: border-box;
@@ -43,20 +31,29 @@ main {
   width: 70px;
   height: auto;
   margin-right: 8px;
+  margin-left: 0;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 
 }
 #post-photo {
   width: 500px;
   height: auto;
   border-radius: 8px;
+  text-shadow: 2px 2px;
 }
-textarea {
+textarea, ::placeholder {
   text-shadow: 0 0 1px #140436;
   width: 500px;
-
+  background-color: rgba(217, 213, 207, 0.064);
+  color: #140436;
 }
 .post-stats {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   padding: 12px 0;
   cursor: default ;
@@ -101,6 +98,9 @@ button {
 .button-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  margin: 0 auto; 
 }
 
 .details-button {
@@ -108,9 +108,9 @@ button {
   margin-left: 16px;
 }
 
-.delete-button {
-  margin-bottom: 24px;
-}
+/* .delete-button {
+  margin-bottom: 50px;
+} */
 
 .comment-button {
   background-color: lightskyblue;
