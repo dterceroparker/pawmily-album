@@ -4,11 +4,12 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
+
 <main>
   <div class="form-container">
     <form action="/posts" method="POST">
       <div class="stage-input">
-      <label for="stage-input">Life Stage</label> 
+        <label for="stage-input">Photo Life Stage</label> 
       <br>
       <select name="stage" id="stage-type">
         <option value="Puppy">Puppy</option>
@@ -16,16 +17,16 @@
         <option value="Sage">Sage</option>
       </select>
       </div>
-        <br>
+      <br>
       <div class="photo-input">
         <label for="photo-input">Photo </label>
         <br>
         <input type="text" name="photo" placeholder="Photo URL">
       </div>
       <div class="description-input">
-          <label for="description-input">Post Story </label>
-          <br>
-          <textarea placeholder="Please tell us more!" name="description" cols="50" rows="10"></textarea>
+        <label for="description-input">Post Story </label>
+        <br>
+        <textarea placeholder="Please tell us more!" name="description" cols="50" rows="10"></textarea>
       </div>
       <div class="date-input">
         <label for="date-input">Date</label>
@@ -33,12 +34,12 @@
         <input type="datetime-local" name="date" id="date-input">
         <input type="datetime-local" id="hidden-date" name="currentLocalDateTime" hidden>
       </div>
-        <br>
+      <br>
       <div class="publish-btn">
-        <button type="submit">Publish Post</button>
+        <button type="submit">Publish Post 🖋</button>
       </div>
-      </form>
-    </div>
+    </form>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

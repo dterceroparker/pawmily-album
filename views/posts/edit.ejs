@@ -4,10 +4,11 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
+
 <main>
   <div class="form-container">
     <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
-      <label for="stage-input" name="stage">Life Stage</label>
+      <label for="stage-input" name="stage">Photo Life Stage</label>
       <br>
       <select name="stage" id="stage-type">
         <option value="Puppy">Puppy</option>
@@ -16,9 +17,9 @@
       </select>
       <br><br>
       <label>
-        Photo:
+        Photo
         <br>
-        <input 
+        <input
         type="string"
         name="photo"
         value="<%= post.photo %>"
@@ -26,7 +27,8 @@
       </label>
       <br><br>
       <label>
-        Post Story <br>
+        Post Story
+        <br>
         <textarea cols="50" rows="10"
         type="text"
         name="description"
@@ -35,7 +37,7 @@
       </label>
       <br><br>
       <label>
-        <button type="submit">Update Post</button>
+        <button type="submit">Update Post 📧</button>
       </label>
     </form>
   </div>

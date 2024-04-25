@@ -7,69 +7,59 @@
 <h1><%= title %></h1>
 
 <section class="scroller">
-<main>
-  <div class="post-container">
-    <div class="post-card">
-      <div class="author">
-        <img id="avatar" src="<%= post.author.avatar %>" alt="user profile image">
-        <h4><%= post.author.name %></h4>
-      </div>
-      
-      <div>
-        <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
-        
-        <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
-        
-        <p class="post-description"><%= post.description %></p>
-      </div>
-
-      <div class="post-stats">
-        <div class="button-container">
-          <% if (post.author._id.equals(user.profile._id)) { %>
-            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
-              <button class="delete-button">Delete 🗑️</button>
-            </form>
-            <a href="/posts/<%= post._id %>/edit">
-              <button class="edit-button">Edit ✎</button>
-            </a>
-          <% } %>
+  <main>
+    <div class="post-container">
+      <div class="post-card">
+        <div class="author">
+          <img id="avatar" src="<%= post.author.avatar %>" alt="user profile image">
+          <h4><%= post.author.name %></h4>
         </div>
-      </div>
-      <form method="POST" action="/posts/<%= post._id %>/comments">
-        <textarea type="text" name="content" cols="20" rows="2" placeholder="Show some love ..."></textarea>
-        <br>
-        <button type="submit" class="comment-button">Comment</button>
-      </form>
-      
-      <% if (post.comments.length) { %>
-        <!-- <h4>Comments</h4> -->
-        <!-- <ul> -->
+        <div>
+          <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+          <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
+          <p class="post-description"><%= post.description %></p>
+        </div>
+        <div class="post-stats">
+          <div class="button-container">
+            <% if (post.author._id.equals(user.profile._id)) { %>
+              <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                <button class="delete-button">Delete 🗑️</button>
+              </form>
+              <a href="/posts/<%= post._id %>/edit">
+                <button class="edit-button">Edit ✎</button>
+              </a>
+            <% } %>
+          </div>
+        </div>
+        <form method="POST" action="/posts/<%= post._id %>/comments">
+          <textarea type="text" name="content" cols="20" rows="2" placeholder="Show some love ..."></textarea>
+          <br>
+          <button type="submit" class="comment-button">Comment</button>
+        </form>
+        <% if (post.comments.length) { %>
           <% post.comments.forEach(comment => { %>
             <div class="comments">
               <div class="comment">
-              <!-- <li> -->
                 <img 
-                class="comment-image" 
-                src="<%= comment.author.avatar %>" 
-                alt="comment author avatar"
+                  class="comment-image" 
+                  src="<%= comment.author.avatar %>" 
+                  alt="comment author avatar"
                 >
                 <p><%= comment.content %> </p>
               </div>
             </div>
-              <% if (comment.author._id.equals(user.profile._id)) { %>
-                <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                  <button id="delete-comment" type="submit">🗑️</button>
-                </form> 
-              <% } %>
-            <!-- </li> -->
+                <% if (comment.author._id.equals(user.profile._id)) { %>
+                  <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                    <button id="delete-comment" type="submit">🗑️</button>
+                  </form> 
+                <% } %>
           <% }) %>
-        <!-- </ul> -->
-      <% } else { %>
-        <h4 class="no-comment">No comments yet 🤍</h4>
-      <% } %>
+        <% } else { %>
+          <h4 class="no-comment">No comments yet 🤍</h4>
+        <% } %>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 </section>
 
 <%- include('../partials/footer') %>
