@@ -1,5 +1,5 @@
 import { Profile } from '../models/profile.js'
-import { Post } from "../models/post.js";
+import { Post } from "../models/post.js"
 
 function showProfilePosts(req, res) {
   Profile.findById(req.user.profile._id)

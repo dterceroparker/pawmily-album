@@ -1,5 +1,5 @@
-import { Post } from "../models/post.js";
-import { Profile } from "../models/profile.js";
+import { Post } from "../models/post.js"
+import { Profile } from "../models/profile.js"
 
 function newPost(req, res) {
     let offset = new Date().getTimezoneOffset() * 60000
@@ -8,7 +8,7 @@ function newPost(req, res) {
     res.render('posts/new', {
       title: 'New Post'
     })
-  } 
+} 
 
 function create(req, res) {
   req.body.author = req.user.profile._id
@@ -29,7 +29,7 @@ function show(req, res) {
   .then(post => {
     res.render('posts/show', {
       title: 'Post Details',
-      post
+      post: post
     })
   })
   .catch(err => {
@@ -45,7 +45,7 @@ function index(req, res) {
     .then(posts => {
       res.render('posts/index', {
         title: 'Puppy Posts',
-        posts 
+        posts: posts 
       })
     })
     .catch(err => {
@@ -58,7 +58,7 @@ function index(req, res) {
     .then(posts => {
       res.render('posts/index', {
         title: 'Adult Posts',
-        posts 
+        posts: posts 
       })
     })
     .catch(err => {
@@ -71,7 +71,7 @@ function index(req, res) {
     .then(posts => {
       res.render('posts/index', {
         title: 'Sage Posts',
-        posts 
+        posts: posts
       })
     })
     .catch(err => {
@@ -121,8 +121,8 @@ function edit(req, res) {
   .then(post => {
     if (post.author.equals(req.user.profile._id)) {
         res.render('posts/edit', {
-        post: post,
-        title: 'Edit Post',
+          title: 'Edit Post',
+          post: post
       })
     } else {
       throw new Error('🚫 Not authorized 🚫')
