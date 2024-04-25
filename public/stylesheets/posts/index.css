@@ -1,3 +1,9 @@
+.scroller {
+  height: 700px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: rgba(23, 123, 114, 0.245) #d6eadf;
+}
 
 .post-card {
   display: flex;

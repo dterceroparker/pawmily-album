@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="stylesheets/posts/show.css">
+<link rel="stylesheet" href="/stylesheets/profiles/show.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script defer src="/javascripts/javascript.js"></script>
 <%- include('../partials/nav') %>
@@ -8,36 +8,46 @@
 
 <h3>Nice to see you, <%= user.profile.name %>!</h3>
 
+<section class="scroller">
 <main>
-  <div class="posts-list">
+  <div class="post-container">
+    <div class="post-card">
   <% if (posts.length) { %>
     <% posts.forEach(post => { %>
-      <a href="/posts/ <%= post._id %>"></a>
-        <h2><%= post.author.name %></h2>
-        <div class="post-card">
+    
           <h4>Memory Lane: <%= post.stage %></h4>
-          <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
-          <p><%= post.content %></p>
+        <div>
+        <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+        
+        <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
+        
+        <p class="post-description"><%= post.description %></p>
+      </div>
+        <br>
+      <% post.comments.forEach(comment => { %>
+        <div class="comments">
+          <div class="comment">
+          <!-- <li> -->
+            <img 
+            class="comment-image" 
+            src="<%= comment.author.avatar %>" 
+            alt="comment author avatar"
+            >
+            <p><%= comment.content %> </p>
+          </div>
         </div>
-
-        <div class="post-stats">
-          <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
-        </div>
-        <%= post.comments.length %>
-         <!-- post.comments.content %>  -->
+        <% }) %> 
+        
+        
+      <!-- post.comments.content %>  -->
     <% }) %> 
     <% } else { %>
       <h4>No posts yet 🤍</h4>
     <% } %>
   </div>
+  </div>
 </main>
-
-
-
-
-
-
-
+</section>
 
 
 <%- include('../partials/footer') %>

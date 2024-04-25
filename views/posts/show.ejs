@@ -5,6 +5,8 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
+
+<section class="scroller">
 <main>
   <div class="post-container">
     <div class="post-card">
@@ -13,12 +15,14 @@
         <h4><%= post.author.name %></h4>
       </div>
       
+      <div>
         <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
         
         <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
         
         <p class="post-description"><%= post.description %></p>
-      
+      </div>
+
       <div class="post-stats">
         <div class="button-container">
           <% if (post.author._id.equals(user.profile._id)) { %>
@@ -66,4 +70,6 @@
     </div>
   </div>
 </main>
+</section>
+
 <%- include('../partials/footer') %>
