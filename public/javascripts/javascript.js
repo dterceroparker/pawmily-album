@@ -12,26 +12,4 @@ window.addEventListener('load', function() {
   }
   hiddenDateInputEl.value = localISOTime
 })
-
-
-
-
-//-------------> Sidebar <-------------//
-// let menuBtn = document.getElementById('menu-btn');
-// let sidebar = document.querySelector('.sidebar');
-
-// menuBtn.onclick = function() {
-//   sidebar.classList.toggle('active')
-// }
-
-const handleAddLike = async () => {
-  const res = await post.addLike(id)
-
-}
-
-// post.author._id === post.user.profile &&
-
-// if post.likes.includes(user.profile)
-// const likeButton = {
-//   <button onClick={props.handleAddLike}>Like</button>
-// }
+//-------------> Instructor Ben Manley's Code for Date Object <-------------//

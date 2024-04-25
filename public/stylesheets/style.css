@@ -38,6 +38,11 @@ main {
   width: calc(100% - 80px);
   padding: 1rem;
 } 
+.log-in {
+  height: 100%;
+  display: flex;
+  
+}
 
 .container {
   display: flex;
@@ -113,7 +118,6 @@ h3 {
   margin-left: 10px;
   margin-top: 5px;
 }
-
 .sidebar {
   display: flex;
   flex-direction: column;
