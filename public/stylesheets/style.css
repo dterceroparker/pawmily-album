@@ -9,14 +9,6 @@
   font-family: "Poppins", sans-serif;
   box-sizing: inherit;
 }
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after {
-  /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default but can be overridden as needed */
-  box-sizing: inherit;
-}
 
 body {
   background-color: #d6eadf;
@@ -46,30 +38,10 @@ main {
   width: calc(100% - 80px);
   padding: 1rem;
 } 
+
 .container {
   display: flex;
   justify-content: space-between;
-}
-
-#sidebar-avatar {
-  border-radius: 10%;
-  width: 70px;
-  height: auto;
-  box-shadow: 0 15px 50px rgba(228, 206, 8, 0.613);
-  margin-left: 10px;
-  margin-top: 5px;
-}
-
-.log-in-message {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    margin-right: 800px;
-    margin-bottom: 2000px;
-    color:rgba(0, 0, 255, 0.45)
-  }
-
-.container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -84,7 +56,16 @@ main {
   background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
   background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
-} 
+}
+
+.log-in-message {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-right: 800px;
+    margin-bottom: 2000px;
+    color:rgba(0, 0, 255, 0.45)
+  }
 
 h1 {
   text-align: center;
@@ -99,8 +80,8 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px #2920202b;
-
 }
+
 .circle-image {
   width: 220px;
   height: 220px;
@@ -109,6 +90,7 @@ h1 {
   shape-outside: circle;
   margin: 60px 30px 30px 0;
 }
+
 p {
   margin: 0;
   padding: 0;
@@ -116,24 +98,20 @@ p {
   line-height: 1.5;
   font-size: 1rem;
 }
+
 h3 {
   margin: 0 0 20px;
   padding: 0;
   font-size: 2rem;
 }
 
-.sidebar > a, .sidebar > div {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  margin-top: 16px;
-}
-
-i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:rgba(223, 168, 19, 0.548)
+#sidebar-avatar {
+  border-radius: 10%;
+  width: 70px;
+  height: auto;
+  box-shadow: 0 15px 50px rgba(228, 206, 8, 0.613);
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .sidebar {
@@ -159,7 +137,6 @@ i {
   }
 }
 
-
 .sidebar:hover {
   width: 230px;
   transition: all 0.5s ease;
@@ -167,8 +144,23 @@ i {
     display: block;
   }
 }
+
 .sidebar:hover #logo span {
   display: block;
+}
+
+.sidebar > a, .sidebar > div {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 16px;
+}
+
+i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:rgba(223, 168, 19, 0.548)
 }
 
 #logo {
@@ -177,6 +169,7 @@ i {
   transition: all 0.5s ease;
   margin: 10px 0 0 10px;
 }
+
 #logo span {
   font-weight: bold;
   padding-left: 15px;
@@ -184,9 +177,11 @@ i {
   text-transform: uppercase;
   display: none;
 }
+
 span {
   text-transform: uppercase;
 }
+
 a {
   /* position: relative; */
   color: rgb(85, 83, 83);
@@ -195,6 +190,7 @@ a {
   /* width: 300px; */
   padding: 10px
 }
+
 .fas {
   /* position: relative; */
   /* width: 70px; */
@@ -203,6 +199,7 @@ a {
   font-size: 1.5rem;
   /* text-align: center; */
 }
+
 .nav-item {
   /* position: relative; */
   top: 12px;
@@ -214,6 +211,7 @@ a {
   text-shadow: 1px 1px 2px #2920202b;
   text-shadow: -4px 1px #0e0d0d,;
 }
+
 .nav-btn {
   /* position: relative; */
   /* top: 12px; */

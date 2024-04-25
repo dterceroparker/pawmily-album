@@ -41,7 +41,9 @@ h4 {
   margin-left: 10px;
   -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: black;
-
+  font-size: 1.2rem;;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 #post-photo {
   width: 500px;

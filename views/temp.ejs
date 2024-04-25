@@ -1,5 +1,14 @@
 <!-- likes -->
 
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default but can be overridden as needed */
+  box-sizing: inherit;
+}
 <div class="rating-selected">
   <form method="PATCH" action="/posts/<%= post._id %>/likes/<%= likes._id%>">
     <button id="like-button"><span class="post-rating-button material-icons-outlined">favorite</span></button>

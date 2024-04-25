@@ -1,7 +1,7 @@
 <% if (!user) { %>
   <script defer src="https://accounts.google.com/gsi/client"></script>
-  
 <% } %>
+
 </head>
 <body>
   <div class="sidebar">
@@ -29,7 +29,8 @@
         <a href="/posts?type=adult"><button class="nav-btn">Adult Posts</button></a>
         <a href="/posts?type=sage"><button class="nav-btn">Sage Posts</button></a>
         <a href="/auth/logout" class="right">
-          <button class="nav-btn" type="logout-btn">Logout</button></a>
+          <button class="nav-btn" type="logout-btn">Logout</button>
+        </a>
       </div>
     <% } else { %>
       <div 

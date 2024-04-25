@@ -9,45 +9,39 @@
 <h3>Nice to see you, <%= user.profile.name %>!</h3>
 
 <section class="scroller">
-<main>
-  <div class="post-container">
-    <div class="post-card">
-  <% if (posts.length) { %>
-    <% posts.forEach(post => { %>
-    
-          <h4>Memory Lane: <%= post.stage %></h4>
+  <main>
+    <div class="post-container">
+      <div class="post-card">
+    <% if (posts.length) { %>
+      <% posts.forEach(post => { %>
+        <h4>Memory Lane: <%= post.stage %></h4>
         <div>
-        <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
-        
-        <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
-        
-        <p class="post-description"><%= post.description %></p>
-      </div>
-        <br>
-      <% post.comments.forEach(comment => { %>
-        <div class="comments">
-          <div class="comment">
-          <!-- <li> -->
-            <img 
-            class="comment-image" 
-            src="<%= comment.author.avatar %>" 
-            alt="comment author avatar"
-            >
-            <p><%= comment.content %> </p>
-          </div>
+          <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+          <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
+          <br>
+          <p class="post-description"><%= post.description %></p>
         </div>
-        <% }) %> 
-        
-        
-      <!-- post.comments.content %>  -->
-    <% }) %> 
+        <br>
+        <% post.comments.forEach(comment => { %>
+          <div class="comments">
+            <div class="comment">
+              <img 
+                class="comment-image" 
+                src="<%= comment.author.avatar %>" 
+                alt="comment author avatar"
+              >
+              <p><%= comment.content %> </p>
+              <br>
+            </div>
+          </div>
+        <% }) %>
+      <% }) %> 
     <% } else { %>
-      <h4>No posts yet 🤍</h4>
-    <% } %>
-  </div>
-  </div>
-</main>
+          <h4>No posts yet 🤍</h4>
+          <% } %>
+        </div>
+      </div>
+  </main>
 </section>
-
 
 <%- include('../partials/footer') %>

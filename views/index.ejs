@@ -5,15 +5,14 @@
 <h1>Welcome, <%= user ? user.profile.name : "friend!" %></h1>
 
 <main>
-  <div class="log-in">  
-  <% if (user?.profile.avatar) { %>
-
-  <% } %>
-  <% if (!user) { %>
-    <h4 class="log-in-message"> ↖️ Please sign in with Google on the top left!</h4>
-  <% } %>
-    </div>
-    <div class="container">
+  <div class="log-in">
+    <% if (user?.profile.avatar) { %>
+    <% } %>
+      <% if (!user) { %>
+        <h4 class="log-in-message"> ↖️ Please sign in with Google on the top left!</h4>
+      <% } %>
+  </div>
+  <div class="container">
     <div class="circle-image">
       <img class="circle-image" src="/assets/image/loves.jpeg" alt="two sweet puppies">
     </div>
