@@ -16,14 +16,15 @@ The PawMily Album app offers:
 - [x] Day night mode
 - [x] Purple (wisdom) and blue (trust) color tone 
 ---
-[Project Planning Material Link](https://trello.com/b/1ixhu1oN/pawmily-album)
+
+### `[Project Planning Material Link](https://trello.com/b/1ixhu1oN/pawmily-album)`
 
 ---
 
 `Icebox Items`
 
 ***
- ### `Technology` 
+ ##### `Technology` 
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -38,19 +39,17 @@ The PawMily Album app offers:
 
 ##### `Attributions Links`
 
+- [x] [Favicon.cc](https://www.favicon.cc/) <br>
 - [x] [coolors.co](https://coolors.co/gradients) <br>
-
-- [x] [Favicon.cc](https://www.favicon.cc/) <br />
-- [x] [fonts.google](https://fonts.google.com/specimen/Dancing+Script) <br />
-
-- [x] [markdown-badges](https://github.com/Ileriayo/markdown-badges) <br />
-
-- [x] [Build A Responsive Sidebard Menu](https://www.youtube.com/watch?v=uy1tgKOnPB0&t=646s) <br />
-- [x] [Responsive Side Nav Bar](https://www.youtube.com/watch?v=puOJox9p_YE&t=399s) <br />
-- [x] [Add Rating Buttons](https://youtu.be/20tJJAI6_oA?si=FHY0veTFNTHkk9Ys) <br />
-- [x] [Google Material Symbols](https://fonts.google.com/icons) <br />
-- [x] [Hoot - Likes (Bonus](https://youtu.be/URaAMXYDc2U?si=Gtje_x21Y7D8V8Cp)
-- [x] [Rainbow Gradient](https://welearncode.com/rainbow-text/)
-- [x] [Wrap Text Around a Circle - Quick CSS Tips And Tricks](https://www.youtube.com/watch?v=Gws3C4Phs2k)
-- [x] [CSS Tips for Buttons](https://medium.com/)
-- [x] [Instagram Post with Comment Box](https://www.youtube.com/watch?v=-N0Bew-0npk)
+- [x] [CSS Tips for Buttons](https://medium.com/) <br>
+- [x] [Google Material Symbols](https://fonts.google.com/icons) <br>
+- [x] [Rainbow Gradient](https://welearncode.com/rainbow-text/) <br>
+- [x] [markdown-badges](https://github.com/Ileriayo/markdown-badges) <br>
+- [x] [fonts.google](https://fonts.google.com/specimen/Dancing+Script) <br>
+- [x] [Add Rating Buttons](https://youtu.be/20tJJAI6_oA?si=FHY0veTFNTHkk9Ys) <br>
+- [x] [Hoot - Likes (Bonus](https://youtu.be/URaAMXYDc2U?si=Gtje_x21Y7D8V8Cp) <br>
+- [x] [Responsive Side Nav Bar](https://www.youtube.com/watch?v=puOJox9p_YE&t=399s) <br>
+- [x] [Instagram Post with Comment Box](https://www.youtube.com/watch?v=-N0Bew-0npk) <br>
+- [x] [Build A Responsive Sidebard Menu](https://www.youtube.com/watch?v=uy1tgKOnPB0&t=646s) <br>
+- [x] [Wrap Text Around a Circle - Quick CSS Tips And Tricks](https://www.youtube.com/watch?v=Gws3C4Phs2k) <br>
+***
