@@ -45,6 +45,16 @@ h4 {
   margin-bottom: 5px;
   margin-top: 10px;
 }
+
+.nice-to-see-you {
+  font-weight: bold;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px #2920202b;
+  /* text-shadow: -4px 1px #0e0d0d; */
+}
+
 #post-photo {
   width: 500px;
   height: auto;
@@ -95,5 +105,5 @@ h4 {
   margin-right: 10px;
 }
 #no-posts {
- font-size: 1rem;
+font-size: 1rem;
 }

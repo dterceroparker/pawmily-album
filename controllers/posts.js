@@ -1,13 +1,9 @@
 import { Post } from "../models/post.js"
-import { Profile } from "../models/profile.js"
 
 function newPost(req, res) {
-    let offset = new Date().getTimezoneOffset() * 60000
-    let oneYearFromNow = new Date().setFullYear(new Date().getFullYear() + 1)
-    let localISOTime = new Date(oneYearFromNow - offset).toISOString().slice(0, 16)
-    res.render('posts/new', {
-      title: 'New Post'
-    })
+  res.render('posts/new', {
+    title: 'New Post'
+  })
 } 
 
 function create(req, res) {
@@ -120,9 +116,9 @@ function edit(req, res) {
   Post.findById(req.params.postId)
   .then(post => {
     if (post.author.equals(req.user.profile._id)) {
-        res.render('posts/edit', {
-          title: 'Edit Post',
-          post: post
+      res.render('posts/edit', {
+        title: 'Edit Post',
+        post: post
       })
     } else {
       throw new Error('🚫 Not authorized 🚫')
