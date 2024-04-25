@@ -38,11 +38,23 @@ main {
   width: calc(100% - 80px);
   padding: 1rem;
 } 
+
 .log-in {
   height: 100%;
   display: flex;
-  
 }
+
+.log-in-message {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-right: 1000px;
+    margin-bottom: 2000px;
+    color:rgba(0, 0, 255, 0.45);
+    font-size: 1.2rem;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+  }
 
 .container {
   display: flex;
@@ -63,19 +75,9 @@ main {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 }
 
-.log-in-message {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    margin-right: 1000px;
-    margin-bottom: 2000px;
-    color:rgba(0, 0, 255, 0.45)
-  }
-
 h1 {
   text-align: center;
   letter-spacing: 0.15rem;
-  /* text-shadow: -4px 1px #0e0d0d; */
   margin-top: 15px;
   margin-bottom: 10px;
   font-family: sans-serif;
@@ -86,14 +88,13 @@ h1 {
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px #2920202b,;
 }
+
 .welcome-h1 {
   text-align: center;
   letter-spacing: 0.15rem;
-  /* text-shadow: -4px 1px #0e0d0d; */
-  margin-top: 150px;
-  /* margin-bottom: 10px; */
+  margin-top: 160px;
   font-family: sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
@@ -108,6 +109,7 @@ h1 {
   float: left;
   shape-outside: circle;
   margin: 60px 30px 30px 0;
+  box-shadow: 0 15px 50px rgba(35, 106, 150, 0.728);
 }
 
 p {
@@ -115,30 +117,36 @@ p {
   padding: 0;
   text-align: justify;
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #dee2e6;
 }
 
-h3 {
+.what {
   margin: 0 0 20px;
   padding: 0;
   font-size: 2rem;
-  color: #dee2e6da;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px #2920202b,;
+  font-weight: bold;
+  -webkit-text-stroke-width: .7px;
+  -webkit-text-stroke-color: black;
 }
 
 #sidebar-avatar {
   border-radius: 10%;
-  width: 70px;
+  width: 73px;
   height: auto;
   box-shadow: 0 15px 50px rgba(228, 206, 8, 0.613);
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
 }
+
 .sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   position: absolute;
   top: 0;
   bottom: 0;
@@ -171,7 +179,6 @@ h3 {
 
 .sidebar > a, .sidebar > div {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   margin-top: 16px;
 }
@@ -180,20 +187,22 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:rgba(223, 168, 19, 0.548)
+  color:rgba(223, 168, 19, 0.548);
+  font-size: 2rem;
 }
 
-#logo {
-  text-align: center;
-  display: flex;
-  transition: all 0.5s ease;
-  margin: 10px 0 0 10px;
+#logo-paw {
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px #2920202b;
+  text-shadow: -4px 1px #0e0d0d,;
+  font-size: 2.1rem;
 }
 
 #logo span {
   font-weight: bold;
   padding-left: 15px;
-  font-size: 1rem;
   text-transform: uppercase;
   display: none;
 }
@@ -203,28 +212,20 @@ span {
 }
 
 a {
-  /* position: relative; */
   color: rgb(85, 83, 83);
-  font-size: 1rem;
-  /* display: table; */
-  /* width: 300px; */
+  font-size: 1.2rem;
   padding: 10px
 }
 
 .fas {
-  /* position: relative; */
-  /* width: 70px; */
-  /* height: 40px; */
-  /* top: 14px; */
-  font-size: 1.5rem;
-  /* text-align: center; */
+  font-size: 2rem;
 }
 
 .nav-item {
-  /* position: relative; */
   top: 12px;
   margin-left: 10px;
   font-weight: bold;
+  font-size: 1rem;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -233,9 +234,6 @@ a {
 }
 
 .nav-btn {
-  /* position: relative; */
-  /* top: 12px; */
-  /* margin-left: 10px; */
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -246,8 +244,6 @@ a {
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
-  /* padding: 8px; */
-  /* border: 1px solid #26c6da; */
 }
 
 #stage {
