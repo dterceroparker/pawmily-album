@@ -38,7 +38,7 @@ The PawMily Album app offers:
 
 ##### `Attributions Links`
 
-- [x] [coolors.co](https://coolors.co/gradients) <br />
+- [x] [coolors.co](https://coolors.co/gradients) <br>
 
 - [x] [Favicon.cc](https://www.favicon.cc/) <br />
 - [x] [fonts.google](https://fonts.google.com/specimen/Dancing+Script) <br />

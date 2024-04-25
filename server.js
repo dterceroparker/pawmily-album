@@ -1,4 +1,4 @@
-// import npm packages
+// ---> import npm packages <--- //
 import 'dotenv/config.js'
 import express from 'express'
 import path from 'path'
@@ -12,25 +12,25 @@ import passport from 'passport'
 // import custom middleware
 import { passDataToView } from './middleware/middleware.js'
 
-// connect to MongoDB with mongoose
+// ---> connect to MongoDB with mongoose <--- //
 import './config/database.js'
 
-// load passport
+// ---> load passport <--- //
 import'./config/passport.js'
 
-// import routes
+// ---> import routes <--- //
 import { router as indexRouter } from './routes/index.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as postsRouter } from './routes/posts.js'
 import { router as profilesRouter } from './routes/profiles.js'
 
-// create the express app
+// ---> create the express app <--- //
 const app = express()
 
-// view engine setup
+// ---> view engine setup <--- //
 app.set('view engine', 'ejs')
 
-// basic middleware
+// ---> basic middleware <--- //
 app.use(methodOverride('_method'))
 app.use(logger('dev'))
 app.use(express.json())
@@ -41,7 +41,7 @@ app.use(
   )
 )
 
-// session middleware
+// ---> session middleware <--- //
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -53,31 +53,31 @@ app.use(
   })
 )
 
-// passport middleware
+// ---> passport middleware <--- //
 app.use(passport.initialize())
 app.use(passport.session())
 
-// custom middleware
+// ---> custom middleware <--- //
 app.use(passDataToView)
 
-// mount imported routes
+// ---> mount imported routes <--- //
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/posts', postsRouter)
 app.use('/profiles', profilesRouter)
 
-// catch 404 and forward to error handler
+// ---> catch 404 and forward to error handler <--- //
 app.use(function (req, res, next) {
   next(createError(404))
 })
 
-// error handler
+/// ---> error handler <--- //
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
-  // render the error page
+  // ---> render the error page <--- //
   res.status(err.status || 500)
   res.render('error', {
     title: `🎊 ${err.status || 500} Error`,

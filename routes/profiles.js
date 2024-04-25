@@ -6,7 +6,6 @@ const router = Router()
 
 router.get('/:profileId', isLoggedIn, profilesCtrl.showProfilePosts)
 
-
 export { 
   router 
 }

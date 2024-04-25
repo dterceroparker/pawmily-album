@@ -18,12 +18,9 @@ router.get('/:postId/edit', isLoggedIn, postsCtrl.edit)
 
 router.delete('/:postId', isLoggedIn, postsCtrl.delete)
 
-
-
 router.post('/:postId/comments', isLoggedIn, postsCtrl.addComment)
 
 router.delete('/:postId/comments/:commentId', isLoggedIn, postsCtrl.deleteComment)
-
 
 export {
   router
