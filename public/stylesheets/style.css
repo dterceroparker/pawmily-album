@@ -232,7 +232,7 @@ a {
   /* border: 1px solid #26c6da; */
 }
 a:hover {
-  background: rgba(55, 55, 151, 0.317);
+  /* background: rgba(55, 55, 151, 0.317); */
 }
 #stage {
   display: flex;
