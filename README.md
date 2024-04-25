@@ -17,7 +17,7 @@ The PawMily Album app offers:
 - [x] Purple (wisdom) and blue (trust) color tone 
 ---
 
-### `[Project Planning Material Link](https://trello.com/b/1ixhu1oN/pawmily-album)`
+### [Project Planning Material Link](https://trello.com/b/1ixhu1oN/pawmily-album)
 
 ---
 
