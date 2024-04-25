@@ -121,7 +121,7 @@ function edit(req, res) {
   .then(post => {
     if (post.author.equals(req.user.profile._id)) {
         res.render('posts/edit', {
-        post,
+        post: post,
         title: 'Edit Post',
       })
     } else {
