@@ -42,12 +42,12 @@
   margin-right: 30vw;
   margin-top: 0px;
 }
-#avatar {
+#show-avatar {
   border-radius: 10%;
   width: 70px;
   height: auto;
   box-shadow: 0 15px 50px rgba(228, 206, 8, 0.204);
-  margin-left: 10px;
+  margin-left: 150px;
   margin-top: 5px;
 }
 h4 {
@@ -97,12 +97,12 @@ textarea, ::placeholder {
 .button-container {
   display: flex;
   justify-content:flex-end;
-  margin-left: 21vw;
+  margin-left: 16vw;
 }
 
 .comment-button {
-  margin-left: 27vw;
-  margin-bottom: 10px;
+  margin-left: 21vw;
+  margin-bottom: 15px;
 }
 
 .no-comment {
@@ -138,7 +138,7 @@ button:hover {
 #delete-comment {
   width: 40px;
   height: 20px;
-  margin-left: 31vw;
+  margin-left: 23vw;
   font-weight: bold;
   background-color: aliceblue;
   margin-top: 5px;

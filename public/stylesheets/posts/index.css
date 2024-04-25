@@ -4,6 +4,9 @@
   scroll-snap-type: y mandatory;
   scrollbar-color: rgba(23, 123, 114, 0.245) #d6eadf;
 }
+.index-h1 {
+  margin-bottom: 50px;
+}
 
 .post-card {
   display: flex;
@@ -12,7 +15,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  width: 700px;
   padding: 30px;
   margin-bottom: 50px;
   box-sizing: border-box;
@@ -87,7 +90,8 @@ button:hover {
   display: flex;
   align-items: end;
 }
-/* .details-button {
+.details-button {
   background-color: rgba(15, 153, 151, 0.642);
-  margin-left: 400px;
-} */
+  margin-left: 6000px;
+  margin-top: 40px;
+}

@@ -12,7 +12,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  width: 700px;
   padding: 30px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -53,6 +53,10 @@ h4 {
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px #2920202b,;
   /* text-shadow: -4px 1px #0e0d0d; */
+  margin-bottom: 100px;
+}
+.show-h1 {
+  top: 1em;
 }
 
 #post-photo {
@@ -83,6 +87,7 @@ h4 {
   overflow: auto;
   background-color: rgba(28, 90, 144, 0.281);
 }
+
 .comments::-webkit-scrollbar {
   display: none;
   opacity: 0;
@@ -104,6 +109,7 @@ h4 {
   border-radius: 50%;
   margin-right: 10px;
 }
+
 #no-posts {
 font-size: 1rem;
 }
