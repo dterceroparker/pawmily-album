@@ -48,7 +48,7 @@ PawMily Album app offers:
 - [x] `Passport.js`
 ***
 
-#### `Attributions Links`
+### `Attributions Links`
 
 - [x] [Favicon.cc](https://www.favicon.cc/) <br>
 - [x] [coolors.co](https://coolors.co/gradients) <br>
