@@ -1,6 +1,8 @@
 # `PawMily Album App`
 ***
 
+(public/assets/image/README 1.png)
+(public/assets/image/README 2.png)
 
 ## [PawMily Album App Link](https://pawmily-album.fly.dev/)
 ---
