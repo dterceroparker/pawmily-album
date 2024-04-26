@@ -5,16 +5,14 @@
 ## [PawMily Album App Link](https://pawmily-album.fly.dev/)
 ---
 ### `Description`
-##### A bootcamp experience inevitably leads us to experience the emotional cycle of change. The combination of facing the "valley of despair" stage whilst the insidious imposter syndrome voice gets louder--all while attempting to learn a completely new language--can make us feel alone in the fog. When faced with doubt, fear, and the strong urge to give up; understanding, support and wisdom can help us embrace and trust the journey. As Buddhist monk Thích Nhất Hạnh says, it is with the breath that we return home to ourselves and to the present moment. 
+##### PawFamily App is a pet-focused app that encapsulates both social and meditative components. How? Users can engage with each others’ posts via comments while navigating a minimalist space where pet family members are at the limelight. We guarantee placing FOMO on the back burner while in our space. Check it out! 🐕 🐈‍⬛
 ---
-The PawMily Album app offers:
+PawMily Album app offers:
 
-- [x] Eight seconds of deep breathing 
-- [x] Wisdom from Stoic philosophy, Buddhism, psychologists, a physician and a poet 
-- [x] Support categories: a. Comparison b. Impostor Syndrome c. Acceptance d. Self-Love
-- [x] Randomized quotes per category
-- [x] Day night mode
-- [x] Purple (wisdom) and blue (trust) color tone 
+- [x] Adventure down pet memory lane with minimal distractions. 
+- [x] Filter posts based on pet life stage and access your personal photo album.
+- [x] Members interact with your posts via comments.
+- [x] Ad free
 ---
 
 ### [Project Planning Material Link](https://trello.com/b/1ixhu1oN/pawmily-album)
@@ -48,7 +46,7 @@ The PawMily Album app offers:
 - [x] `Passport.js`
 ***
 
-##### `Attributions Links`
+#### `Attributions Links`
 
 - [x] [Favicon.cc](https://www.favicon.cc/) <br>
 - [x] [coolors.co](https://coolors.co/gradients) <br>
