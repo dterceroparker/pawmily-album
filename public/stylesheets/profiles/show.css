@@ -47,16 +47,20 @@ h4 {
 }
 
 .nice-to-see-you {
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 100px;
+  font-size: 1.5rem;
+}
+
+.show-h1 {
   font-weight: bold;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px #2920202b,;
-  /* text-shadow: -4px 1px #0e0d0d; */
-  margin-bottom: 100px;
-}
-.show-h1 {
-  top: 1em;
+  text-shadow: 1px 1px 2px #2920202b;
+  font-size: 2rem;
 }
 
 #post-photo {
@@ -66,6 +70,7 @@ h4 {
   text-shadow: 2px 2px;
   box-shadow: 0 15px 50px rgba(228, 206, 8, 0.204);
 }
+
 .post-description {
   flex-grow: 1;
   border-top: .5mm solid rgba(217, 203, 203, 0.225);

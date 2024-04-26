@@ -11,6 +11,8 @@
   box-sizing: border-box;
   border-radius: 10px;
   box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
+  text-shadow: 1px 1px 2px #292020b6;
+  font-size: 1rem;
   background: hsla(213, 77%, 14%, 1);
   background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
   background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
@@ -26,19 +28,19 @@ input, textarea {
 }
 
 button {
-align-items: center;
-background: hsla(242, 58%, 73%, 1);
-background: linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
-background: -moz-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
-background: -webkit-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9491E2", endColorstr="#AFF2D8", GradientType=1 );
-padding:2px;
+  align-items: center;
+  font-weight: 600;
+  background: hsla(242, 58%, 73%, 1);
+  background: linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9491E2", endColorstr="#AFF2D8", GradientType=1 );
+  padding: 2.9px;
 }
 
 .form-title {
   text-align: center;
   letter-spacing: 0.15rem;
-  /* text-shadow: -4px 1px #0e0d0d; */
   margin-top: 150px;
   margin-bottom: 10px;
   font-family: sans-serif;
@@ -47,5 +49,5 @@ padding:2px;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px #2920202b,;
+  text-shadow: 1px 1px 2px #2920202b;
 }

@@ -6,14 +6,14 @@
 
 <section class="scroller">
   <main>
-    <div class="posts-container">
+    <div class="index-posts-container">
       <% posts.forEach(post => { %>
-        <div class="post-card">
+        <div class="index-post-card">
           <div class="author">
-            <img id="avatar" src="<%= post.author.avatar %>" alt="user profile image">
+            <img id="index-avatar" src="<%= post.author.avatar %>" alt="user profile image">
             <h4><%= post.author.name %></h4>
           </div>
-          <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+          <img id="index-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
           <div class="button-container">
             <a href="/posts/<%= post._id %>"><button class="details-button">See Post 🔎</button></a>
           </div>

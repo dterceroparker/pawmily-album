@@ -2,9 +2,9 @@
 ***
 
 
-#### [PawMily Album App Link](https://pawmily-album.fly.dev/)
+## [PawMily Album App Link](https://pawmily-album.fly.dev/)
 ---
-#### `Description`
+### `Description`
 ##### A bootcamp experience inevitably leads us to experience the emotional cycle of change. The combination of facing the "valley of despair" stage whilst the insidious imposter syndrome voice gets louder--all while attempting to learn a completely new language--can make us feel alone in the fog. When faced with doubt, fear, and the strong urge to give up; understanding, support and wisdom can help us embrace and trust the journey. As Buddhist monk Thích Nhất Hạnh says, it is with the breath that we return home to ourselves and to the present moment. 
 ---
 The PawMily Album app offers:
@@ -21,10 +21,15 @@ The PawMily Album app offers:
 
 ---
 
-`Icebox Items`
+### `Icebox Items`
+
+- [x] AAU, I should be able to create a profile for my pet with embedded posts and embedded comments. 
+- [x] AAU, I should be able to like posts.
+- [x] AAU, I should be able to edit comments.
+- [x] AAU, I should be able to filter my album photos.
 
 ***
- ##### `Technology` 
+ ### `Technology` 
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
