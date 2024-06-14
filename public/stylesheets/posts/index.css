@@ -1,5 +1,5 @@
 .scroller {
-  height: calc(100vh - 20vh); 
+  height: calc(80vh); 
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   scrollbar-color: rgba(23, 123, 114, 0.245) #d6eadf;
@@ -20,7 +20,7 @@
   margin-bottom: 5%;
   text-align: center;
   letter-spacing: 0.15rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2rem, 2.5rem);
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
 }
@@ -70,7 +70,11 @@ index-posts-container:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 30vw;
+  margin-right: calc(10vw + 30px); 
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 0; 
+  }
 }
 
 .index-post-card img {
@@ -82,6 +86,10 @@ index-posts-container:hover {
   width: 60px;
   height: auto;
   box-shadow: 0 15px 50px rgba(228, 206, 8, 0.204);
+
+  @media only screen and (max-width: 768px) {
+    display: none; 
+  }
 }
 
 h4 {
@@ -101,33 +109,29 @@ h4 {
   box-shadow: 0 15px 5
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; 
+}
+
 div.button-container > a > button {
-  background: hsla(242, 58%, 73%, 1);
-  background: linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
-  background: -moz-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
-  background: -webkit-linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9491E2", endColorstr="#AFF2D8", GradientType=1 );
   width: 90px;
   height: 30px;
   border-radius: 8px;
   box-shadow: inset 5px 5px 10px -5px rgba(0, 0, 0, 0.5);
-  margin-left: 400px;
+  margin: 10px auto; 
+  cursor: pointer;
+  color: white; 
+  font-weight: bold; 
+  transition: all 0.2s ease-in-out; 
+  background: hsla(242, 58%, 73%, 1);
+  background-image: linear-gradient(to right, #9491E2 0%, #AFF2D8 100%);
+  
 }
 
 button:hover {
-  transform: scale(0.5);
-  transition: transform 2s ease-in-out .5s;
-  -webkit-box-reflect: below 1px 
-    linear-gradient(to bottom, rgba(0,0,0,0.0), 
-    rgba(0,0,0,0.5));
-}
-
-.button-container {
-  display: flex;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  transform: scale(1.05); 
+  box-shadow: inset 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
 }
 
 .details-button {

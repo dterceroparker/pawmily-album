@@ -1,7 +1,7 @@
 .scroller {
-  height: calc(100vh - 75px); 
+  height: calc(100vh - 25px); 
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+
   scrollbar-color: rgba(23, 123, 114, 0.245) #d6eadf;
 }
 
@@ -13,13 +13,13 @@ main {
 }
 
 .post-container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   max-width: 700px; 
   padding: 2rem; 
-  display: flex;
   border-radius: 10px;
   box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
   background: hsla(213, 77%, 14%, 1);
@@ -72,7 +72,7 @@ h4 {
 
 #post-photo {
   width: 100%;
-  max-height: auto !important; 
+  height: 200px; /* Adjust height as desired */
   object-fit: cover; 
   border-radius: 5px; 
   margin-bottom: 1rem;
