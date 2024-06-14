@@ -11,19 +11,17 @@
 }
 
 body {
-  background-color: #d6eadf;
-  color: #babad3;
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  height: 100vh;
-  margin: 0px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-family: "Platypi", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  background-color: #d6eadf;
+  color: #babad3;
 }
 
 main {
@@ -32,11 +30,10 @@ main {
   justify-content: center;
   flex-direction: column;
   min-height: 100%;
-  top: 0;
-  left: 80px;
-  transition: all 0.5s ease;
   width: calc(100% - 80px);
   padding: 1rem;
+  transition: all 0.5s ease;
+  margin: 0 auto; 
 } 
 
 .log-in {
@@ -45,15 +42,15 @@ main {
 }
 
 .log-in-message {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    margin-right: 1000px;
-    margin-bottom: 2000px;
-    color:rgba(0, 0, 255, 0.45);
-    font-size: 1.2rem;
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  margin-right: 0; 
+  margin-bottom: 20px;
+  color: rgba(0, 0, 255, 0.45);
+  font-size: 1.2rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
   }
 
 .container {
@@ -80,7 +77,6 @@ h1 {
   letter-spacing: 0.15rem;
   margin-top: 15px;
   margin-bottom: 10px;
-  font-family: sans-serif;
   font-size: 2rem;
   font-weight: bold;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
@@ -106,7 +102,6 @@ h1 {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  float: left;
   shape-outside: circle;
   margin: 60px 30px 30px 0;
   box-shadow: 0 15px 50px rgba(35, 106, 150, 0.728);
@@ -135,15 +130,15 @@ p {
 }
 
 #sidebar-avatar {
-  border-radius: 10%;
+  border-radius: 50%;
   width: 73px;
-  height: auto;
-  box-shadow: 0 15px 50px rgba(228, 206, 8, 0.613);
-  margin-left: 5px;
-  margin-top: 10px;
+  height: 73px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
+  margin: 20px auto; 
 }
 
 .sidebar {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +149,7 @@ p {
   height: 100%;
   width: 100px;
   overflow: hidden;
-  transition: width 0.2s linear;
+  transition: width 0.2s ease;
   box-shadow: 0 20px 35px rgba(233, 3, 3, 0.1);
   background-color: #0e1428;
   -moz-box-shadow:    -3px 0 5px 0 #f7f1f1;
@@ -180,7 +175,9 @@ p {
 .sidebar > a, .sidebar > div {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  padding: 10px 15px; 
+  margin-top: 10px; 
+  cursor: pointer; 
 }
 
 i {
@@ -188,7 +185,7 @@ i {
   justify-content: center;
   align-items: center;
   color:rgba(223, 168, 19, 0.548);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #logo-paw {
@@ -197,12 +194,12 @@ i {
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px #2920202b;
   text-shadow: -4px 1px #0e0d0d,;
-  font-size: 2.1rem;
+  font-size: 2rem;
 }
 
 #logo span {
   font-weight: bold;
-  padding-left: 15px;
+  padding-left: 10px;
   text-transform: uppercase;
   display: none;
 }
