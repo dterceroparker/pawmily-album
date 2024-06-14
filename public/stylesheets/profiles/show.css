@@ -51,8 +51,6 @@ h4 {
   -webkit-text-stroke-color: black;
 }
 
-
-
 .show-h1 {
   font-weight: bold;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
@@ -72,7 +70,7 @@ h4 {
 
 #post-photo {
   width: 100%;
-  height: 200px; /* Adjust height as desired */
+  height: 200px; 
   object-fit: cover; 
   border-radius: 5px; 
   margin-bottom: 1rem;
