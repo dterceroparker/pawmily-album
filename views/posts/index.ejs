@@ -5,7 +5,7 @@
 <h1 class="index-h1"><%= title %></h1>
 
 <section class="scroller">
-  <main class="main-index">
+  <main class="list-index-container">
     <div class="index-posts-container">
       <% posts.forEach(post => { %>
         <div class="index-post-card">
@@ -15,7 +15,9 @@
           </div>
           <img id="index-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
           <div class="button-container">
-            <a href="/posts/<%= post._id %>"><button class="details-button">See Post 🔎</button></a>
+            <a href="/posts/<%= post._id %>">
+              <button class="details-button">See Post 🔎</button>
+            </a>
           </div>
         </div>
       <% }) %>

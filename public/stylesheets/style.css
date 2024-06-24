@@ -36,25 +36,23 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: calc(100% - 80px); /* Adjust as needed */
+  width: calc(100% - 80px); 
   padding: 1rem;
   transition: all 0.5s ease;
 } 
 
 .log-in-container {
-  z-index: 1; /* Higher value takes precedence */
-  position: absolute; /* Make it absolute for precise positioning */
-  top: 0; /* Position it at the top of the container */
-  left: 100px; /* Position it at the left of the container */
-  /* Additional margins for spacing (optional) */
-  margin: 1rem 2rem; /* Adjust margins as needed */
-  
+  z-index: 1; 
+  position: absolute; 
+  top: 0; 
+  left: 100px; 
+  margin: 1rem 2rem; 
 }
 
 .log-in-message {
-  color: #f00; 
+  color: rgb(32, 29, 186); 
   font-weight: bold;
-margin-bottom: 200px;
+  margin-bottom: 200px;
   font-size: 1.2rem;
 }
 
