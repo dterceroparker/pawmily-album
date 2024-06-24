@@ -13,3 +13,4 @@ window.addEventListener('load', function() {
   hiddenDateInputEl.value = localISOTime
 })
 //-------------> Instructor Ben Manley's Code for Date Object <-------------//
+

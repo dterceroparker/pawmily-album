@@ -23,49 +23,42 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif; /* Or use a base stylesheet */
   height: 100vh;
-  display: flex;
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  font-family: "Platypi", serif;
   background-color: #d6eadf;
   color: #babad3;
+  overflow: hidden;
 }
 
-main {
+.index-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
   height: 100vh;
-  width: 100%;
-  min-height: 100%;
-  width: calc(100% - 80px);
+  width: calc(100% - 80px); /* Adjust as needed */
   padding: 1rem;
   transition: all 0.5s ease;
-  margin: 0 auto; 
 } 
 
-.log-in {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.log-in-container {
+  z-index: 1; /* Higher value takes precedence */
+  position: absolute; /* Make it absolute for precise positioning */
+  top: 0; /* Position it at the top of the container */
+  left: 100px; /* Position it at the left of the container */
+  /* Additional margins for spacing (optional) */
+  margin: 1rem 2rem; /* Adjust margins as needed */
+  
 }
 
 .log-in-message {
   color: #f00; 
   font-weight: bold;
-  margin-bottom: 20px;
+margin-bottom: 200px;
   font-size: 1.2rem;
 }
 
-.container {
+.circle-container {
   display: flex;
   justify-content: space-between;
   position: absolute;
