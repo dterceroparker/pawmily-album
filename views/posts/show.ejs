@@ -5,9 +5,9 @@
 <h1><%= title %></h1>
 
 <section class="scroller">
-  <main>
-    <div class="post-container">
-      <div class="post-card">
+  <main class="show-container">
+    <div class="show-post-container">
+      <div class="show-post-card">
         <div class="author">
           <img id="show-avatar" src="<%= post.author.avatar %>" alt="user profile image">
           <h4><%= post.author.name %></h4>
@@ -36,10 +36,10 @@
         </form>
         <% if (post.comments.length) { %>
           <% post.comments.forEach(comment => { %>
-            <div class="comments">
-              <div class="comment">
+            <div class="show-comments">
+              <div class="show-comment">
                 <img 
-                  class="comment-image" 
+                  class="show-comment-image" 
                   src="<%= comment.author.avatar %>" 
                   alt="comment author avatar"
                 >
@@ -48,7 +48,7 @@
             </div>
                 <% if (comment.author._id.equals(user.profile._id)) { %>
                   <form action="/posts/<%= post._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                    <button id="delete-comment" type="submit">🗑️</button>
+                    <button id="show-delete-comment" type="submit">🗑️</button>
                   </form> 
                 <% } %>
           <% }) %>

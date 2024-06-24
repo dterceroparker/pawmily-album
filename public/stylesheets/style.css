@@ -25,7 +25,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif; /* Or use a base stylesheet */
+  font-family: "Poppins", sans-serif; 
   height: 100vh;
   background-color: #d6eadf;
   color: #babad3;

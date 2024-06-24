@@ -40,10 +40,9 @@
   border-radius: 8px;
   margin-bottom: 32px;
   border-color: #43a047;
-
-  margin-bottom: 2rem; /* Add space between each post card */
-  border-radius: 5px; /* Add rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  margin-bottom: 2rem; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 h4 {
