@@ -4,8 +4,8 @@
 
 <h1 class="form-title"><%= title %></h1>
 
-<main>
-  <div class="form-container">
+<main class="form-container">
+  <div class="new-form-container" style="display: flex; justify-content: center; align-items: center;">  
     <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
       <label for="stage-input" name="stage">Photo Life Stage</label>
       <br>
@@ -15,15 +15,16 @@
         <option value="Sage">Sage</option>
       </select>
       <br><br>
-      <label>
-        Photo
+      <div class="photo-input">
+      <label>Photo</label>
         <br>
         <input
         type="string"
         name="photo"
+        id="edit-photo-input"
         value="<%= post.photo %>"
         >
-      </label>
+      </div>
       <br><br>
       <label>
         Post Story
