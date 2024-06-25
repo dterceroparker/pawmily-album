@@ -50,7 +50,7 @@ body {
 }
 
 .log-in-message {
-  color: rgb(32, 29, 186); 
+  color: rgba(32, 29, 186, 0.775); 
   font-weight: bold;
   margin-bottom: 200px;
   font-size: 1.2rem;
