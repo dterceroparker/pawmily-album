@@ -9,39 +9,38 @@
 
 <section class="scroller">
   <main class="profile-show-container">
-    <div class="profile-post-container">
-      <div class="post-card">
     <% if (posts.length) { %>
       <% posts.forEach(post => { %>
-        <h4>Memory Lane: <%= post.stage %></h4>
-        <div>
-          <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
-          <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
-          <br>
-          <p class="post-description"><%= post.description %></p>
-        </div>
-        <br>
-        <% post.comments.forEach(comment => { %>
-          <div class="comments">
-            <div class="comment">
-              <img 
-                class="comment-image" 
-                src="<%= comment.author.avatar %>" 
-                alt="comment author avatar"
-              >
-              <p><%= comment.content %> </p>
+        <div class="profile-post-container">
+          <div class="post-card">
+            <h4>Memory Lane: <%= post.stage %></h4>
+            <div>
+              <img id="post-photo" src="<%= post.photo %>" alt="A picture of a sweet pet">
+              <h6><%= post.date.toLocaleString('en-US', {weekday: 'long', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric'}) %></h6>
               <br>
+              <p class="post-description"><%= post.description %></p>
             </div>
+            <% post.comments.forEach(comment => { %>
+              <div class="comments">
+                <div class="comment">
+                  <img 
+                    class="comment-image" 
+                    src="<%= comment.author.avatar %>" 
+                    alt="comment author avatar"
+                  >
+                  <p><%= comment.content %> </p>
+                  <br>
+                </div>
+              </div>
+            <% }) %>
           </div>
-        <% }) %>
+        </div>
       <% }) %> 
-      <div id="no-posts">
     <% } else { %>
-      <h4>No posts yet 🤍</h4>
-      <% } %>
+      <div id="no-posts">
+        <h4>No posts yet 🤍</h4>
       </div>
-      </div>
-    </div>
+    <% } %>
   </main>
 </section>
 

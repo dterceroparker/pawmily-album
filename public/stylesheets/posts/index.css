@@ -1,20 +1,17 @@
-/* Global styles */
 body {
-  font-family: 'Arial', sans-serif; /* Change to a more common professional font */
-  background-color: #f0f0f0; /* Light gray background */
+  font-family: 'Arial', sans-serif; 
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
 
-/* Container for scrolling and layout */
 .scroller {
-  height: calc(100vh - 100px); /* Adjusted to fit the screen better */
+  height: calc(100vh - 100px);
   overflow-y: auto;
   scroll-snap-type: y mandatory;
-  scrollbar-color: rgba(23, 123, 114, 0.245) #d6eadf; /* Adjusted scrollbar color */
+  scrollbar-color: rgba(23, 123, 114, 0.245) #d6eadf;
 }
 
-/* Main content container */
 .list-index-container {
   display: flex;
   flex-direction: column;
@@ -22,7 +19,6 @@ body {
   padding: 1rem;
 }
 
-/* Title heading */
 .index-h1 {
   text-align: center;
   letter-spacing: 0.15rem;
@@ -36,7 +32,6 @@ body {
   text-shadow: 1px 1px 2px #2920202b;
 }
 
-/* Container for posts */
 .index-posts-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,24 +40,22 @@ body {
   padding: 20px;
 }
 
-/* Individual post card */
 .index-post-card {
-  width: 100%; /* Ensure all cards have the same width */
-  max-width: 400px; /* Limit maximum width of cards */
+  width: 100%;
+  max-width: 400px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   background: linear-gradient(to right, #F8CF6A, #2178DD);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  overflow: hidden; /* Ensures content doesn't overflow */
+  overflow: hidden;
 }
 
 .index-post-card:hover {
-  transform: scale(1.02); /* Slight zoom on hover */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Author section */
 .author {
   display: flex;
   align-items: center;
@@ -78,13 +71,12 @@ body {
 }
 
 h4 {
-  color: #091e47; /* Dark blue color */
-  font-size: 1rem; /* Adjusted font size */
+  color: #091e47;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0;
 }
 
-/* Post image */
 #index-photo {
   width: 100%;
   max-width: 100%;
@@ -95,10 +87,9 @@ h4 {
 }
 
 .index-post-card:hover #index-photo {
-  transform: scale(1.1); /* Enlarge image on hover */
+  transform: scale(1.1);
 }
 
-/* Button container */
 .button-container {
   display: flex;
   justify-content: center;
@@ -109,13 +100,13 @@ h4 {
   padding: 8px 20px;
   border-radius: 8px;
   cursor: pointer;
-  background: linear-gradient(to right, #9491E2, #AFF2D8); /* Gradient button background */
-  color: #0f0e0e; /* Text color */
+  background: linear-gradient(to right, #9491E2, #AFF2D8);
+  color: #0f0e0e;
   font-weight: bold;
   transition: transform 0.2s ease-in-out;
 }
 
 .details-button:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
-  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5); /* Inset shadow on hover */
+  transform: scale(1.05);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
 }

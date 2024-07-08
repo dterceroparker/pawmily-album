@@ -40,42 +40,47 @@
 }
 
 body {
-  height: 100vh;
   background-color: #d6eadf;
   color: #babad3;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .index-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  height: 100vh; 
   padding: 1rem;
-  transition: all 0.5s ease;
-} 
-
+  position: relative; 
+}
 
 .log-in-container {
   z-index: 1; 
   position: absolute; 
-  top: 0; 
-  left: 100px; 
-  margin: 1rem 2rem; 
+  top: 40px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: #52b83985;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .log-in-message {
-  color: rgba(32, 29, 186, 0.775); 
+  color: #204bb9; 
   font-weight: bold;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  text-align: center;
 }
 
 .circle-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 55%;
+  top: 40%;
   left: 50%;
   width: 600px;
   padding: 30px;
@@ -85,9 +90,18 @@ body {
   box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
   background: hsla(213, 77%, 14%, 1);
   background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-  background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-  background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
+}
+
+@media (max-width: 768px) {
+  .circle-container {
+    width: 90%; 
+    padding: 20px;
+  }
+  .log-in-container {
+    max-width: 90%; 
+    padding: 10px; 
+    top: 80px; 
+  }
 }
 
 h1 {
@@ -105,14 +119,9 @@ h1 {
 
 .welcome-h1 {
   text-align: center;
-  letter-spacing: 0.15rem;
-  margin-top: 100px;
-  font-size: 2.2rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px #2920202b;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #333;
 }
 
 .circle-image {
@@ -120,7 +129,7 @@ h1 {
   height: 200px;
   border-radius: 50%;
   margin: 60px 30px 30px 0;
-  box-shadow: 0 15px 50px rgba(35, 106, 150, 0.728);
+  box-shadow: 0 15px 50px rgba(35, 106, 150, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -128,12 +137,13 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover; 
-  border-radius: 50%;
+  border-radius: 50%; 
+  transition: transform 0.3s ease; 
 }
 
 .circle-image:hover {
   transform: scale(1.05); 
-  box-shadow: 0 25px 60px rgba(35, 106, 150, 0.9); 
+  box-shadow: 0 25px 60px rgba(35, 106, 150, 0.4); 
 }
 
 .pawmily {
@@ -148,6 +158,18 @@ h1 {
     text-align: center;
     max-width: 80%;
     padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .circle-image img {
+    width: 150px; 
+    height: 150px; 
+  }
+  .log-in-container {
+    max-width: 90%; 
+    padding: 10px; 
+    top: 80px; 
   }
 }
 
