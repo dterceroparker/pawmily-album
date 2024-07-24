@@ -293,7 +293,7 @@ a {
     width: 50px;
   }
 
-  h1, h2, h3 {
+  .what, h1, h2, h3 {
     font-size: .9rem;
   }
 
@@ -325,7 +325,7 @@ a {
   .log-in-container {
     width: 80%;
     padding: 15px;
-    top: 20px;
+    top: 15px;
   }
 
   .log-in-message {
