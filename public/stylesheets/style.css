@@ -284,7 +284,7 @@ a {
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 80px;
+    width: 70px;
   }
 
   h1, h2, h3 {
@@ -297,6 +297,7 @@ a {
   }
 
   .circle-container {
+    margin-top: 20px;
     flex-direction: column;
     align-items: center;
     padding: 15px;
