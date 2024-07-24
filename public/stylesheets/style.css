@@ -1,32 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 80px; 
-  }
-  h1, h2, h3 {
-    font-size: 1.5rem;
-  }
-  p {
-    padding: 10px;
-  }
-  .circle-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 90%;
-  }
-  .circle-image {
-    width: 150px;
-    height: 150px;
-    margin: 20px 0;
-  }
-  .pawmily {
-    text-align: center;
-    width: 100%;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -77,31 +50,20 @@ body {
 
 .circle-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 40%;
   left: 50%;
+  transform: translate(-50%, -50%);
   width: 600px;
   padding: 30px;
   box-sizing: border-box;
   border-radius: 10px;
-  transform: translate(-50%, -50%);
   box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
   background: hsla(213, 77%, 14%, 1);
   background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-}
-
-@media (max-width: 768px) {
-  .circle-container {
-    width: 90%; 
-    padding: 20px;
-  }
-  .log-in-container {
-    max-width: 90%; 
-    padding: 10px; 
-    top: 80px; 
-  }
 }
 
 h1 {
@@ -114,7 +76,7 @@ h1 {
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px #2920202b,;
+  text-shadow: 1px 1px 2px #2920202b;
 }
 
 .welcome-h1 {
@@ -128,7 +90,7 @@ h1 {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin: 60px 30px 30px 0;
+  margin: 20px 0; /* Adjusted margin for better vertical centering */
   box-shadow: 0 15px 50px rgba(35, 106, 150, 0.2); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -148,61 +110,59 @@ h1 {
 
 .pawmily {
   text-align: left;
-  max-width: 200px; 
-  margin: 0 auto; 
-  padding: 0 10px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 10px;
 }
 
-@media (max-width: 768px) {
-  .pawmily {
-    text-align: center;
-    max-width: 80%;
-    padding: 0 10px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .circle-image img {
-    width: 150px; 
-    height: 150px; 
-  }
-  .log-in-container {
-    max-width: 90%; 
-    padding: 10px; 
-    top: 80px; 
-  }
-}
-
-p {
-  text-align: justify;
-  line-height: 1.6; 
-  font-size: 1rem; 
-  color: #fbf9f9; 
-  margin-bottom: 1rem; 
-  letter-spacing: normal; 
-}
-
-@media (max-width: 768px) {
-  p {
-    text-align: left; 
-    font-size: 0.9rem; 
-    line-height: 1.5; 
-    padding: 0 1rem; 
-    letter-spacing: normal; 
-  }
-}
-
-.what {
-  margin-bottom: 20px;
-  font-size: 2.3rem;
+.pawmily h3.what {
+  font-size: 1.8rem;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 2px #2920202b;
   font-weight: bold;
-  -webkit-text-stroke-width: .7px;
-  -webkit-text-stroke-color: black;
+  text-align: center;
+  margin-bottom: 15px;
 }
+
+.pawmily p {
+  font-size: 1rem;
+  color: #d2c7c7;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  letter-spacing: normal;
+  padding: 0 10px;
+  text-align: left; 
+}
+
+@media (max-width: 480px) {
+  .pawmily {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .pawmily h3.what {
+    font-size: 1.5rem;
+  }
+
+  .pawmily p {
+    font-size: 0.95rem;
+    padding: 0 5px;
+  }
+
+  .circle-container {
+    width: 90%; 
+    padding: 20px;
+  }
+
+  .circle-image {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+  }
+}
+
 
 #sidebar-avatar {
   border-radius: 50%;
@@ -236,7 +196,7 @@ p {
 }
 
 .sidebar:hover {
-  width: 230px;
+  width: 200px;
   transition: all 0.5s ease;
   span {
     display: block;
@@ -282,7 +242,7 @@ span {
 a {
   color: rgb(85, 83, 83);
   font-size: 1.2rem;
-  padding: 10px
+  padding: 10px;
 }
 
 .fas {
@@ -317,4 +277,90 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px; 
+  }
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    padding: 10px;
+  }
+  .circle-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+  }
+  .circle-image {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+  }
+  .pawmily {
+    text-align: center;
+    width: 100%;
+  }
+  .log-in-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 80px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+
+  .circle-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .circle-image {
+    width: 130px;
+    height: 130px;
+    margin: 15px 0;
+  }
+
+  .pawmily {
+    text-align: center;
+    width: 100%;
+  }
+
+  .log-in-container {
+    width: 90%;
+    padding: 15px;
+    top: 60px;
+  }
+
+  .log-in-message {
+    font-size: 1.1rem;
+  }
+
+  .index-container {
+    padding: 1rem;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
+
+  .nav-btn {
+    font-size: 1rem;
+    padding-left: 12px;
+  }
 }

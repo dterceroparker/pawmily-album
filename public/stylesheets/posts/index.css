@@ -110,3 +110,50 @@ h4 {
   transform: scale(1.05);
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 480px) {
+  .index-h1 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    letter-spacing: 0.1rem;
+  }
+
+  .index-posts-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .index-post-card {
+    padding: 15px;
+    max-width: 100%;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .index-post-card:hover {
+    transform: none;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #index-avatar {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  #index-photo {
+    margin-top: 8px;
+  }
+
+  .button-container {
+    margin-top: 8px;
+  }
+
+  .details-button {
+    padding: 6px 16px;
+  }
+}
