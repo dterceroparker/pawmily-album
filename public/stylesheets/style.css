@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 500px;
+  height: 600px;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -111,31 +111,36 @@ h1 {
 }
 
 .pawmily {
-  text-align: left;
-  max-width: 400px;
+  text-align: center;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 10px 10px;
+  padding: 20px;
 }
 
 .pawmily h3.what {
-  font-size: 1.8rem;
+  font-size: 2rem;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #7b8508, #f9a825, #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px #2920202b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-weight: bold;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .pawmily p {
   font-size: 1rem;
   color: #d2c7c7;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
   letter-spacing: normal;
-  padding: 0 10px;
-  text-align: left; 
+  padding: 0 15px;
+  text-align: left;
+}
+
+.pawmily p::before {
+  content: '✨ ';
+  color: #ff5722;
 }
 
 #sidebar-avatar {
@@ -294,11 +299,11 @@ a {
 
   p {
     padding: 8px;
-    font-size: 0.95rem;
+    font-size: 0.80rem;
   }
 
   .circle-container {
-    margin-top: 20px;
+    margin-top: 10px;
     flex-direction: column;
     align-items: center;
     padding: 15px;
@@ -307,8 +312,8 @@ a {
   }
 
   .circle-image {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     margin: 15px 0;
   }
 
@@ -318,13 +323,13 @@ a {
   }
 
   .log-in-container {
-    width: 90%;
+    width: 80%;
     padding: 15px;
-    top: 40px;
+    top: 30px;
   }
 
   .log-in-message {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .index-container {
