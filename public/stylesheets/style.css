@@ -289,7 +289,7 @@ a {
   }
 
   h1, h2, h3 {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   p {
@@ -303,7 +303,7 @@ a {
     align-items: center;
     padding: 15px;
     width: 90%;
-    top: 40%;
+    top: 45%;
   }
 
   .circle-image {
