@@ -66,6 +66,25 @@ body {
   box-shadow: 0 15px 50px rgba(0, 0, 255, 0.312);
   background: hsla(213, 77%, 14%, 1);
   background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  overflow-y: auto; 
+}
+
+.circle-container::-webkit-scrollbar {
+  width: 12px; 
+}
+
+.circle-container::-webkit-scrollbar-track {
+  background: #204bb9; 
+  border-radius: 10px;
+}
+
+.circle-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, hsla(213, 77%, 34%, 1) 0%, hsla(202, 27%, 55%, 1) 100%);
+  border-radius: 10px;
+}
+
+.circle-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, hsla(213, 77%, 44%, 1) 0%, hsla(202, 27%, 65%, 1) 100%);
 }
 
 h1 {
