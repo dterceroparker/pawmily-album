@@ -31,10 +31,11 @@ body {
 }
 
 .log-in-container {
-  z-index: 1; 
+  z-index: 2; 
   position: absolute; 
-  top: 40px; 
+  top: 30px; 
   left: 50%; 
+  width: 50%;
   transform: translateX(-50%);
   padding: 20px;
   border-radius: 8px;
@@ -284,7 +285,7 @@ a {
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 70px;
+    width: 50px;
   }
 
   h1, h2, h3 {
@@ -302,6 +303,7 @@ a {
     align-items: center;
     padding: 15px;
     width: 90%;
+    top: 60%;
   }
 
   .circle-image {
@@ -318,7 +320,7 @@ a {
   .log-in-container {
     width: 90%;
     padding: 15px;
-    top: 60px;
+    top: 40px;
   }
 
   .log-in-message {
