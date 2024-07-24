@@ -2,8 +2,7 @@
 ***
 
 ![Image 1](public/assets/image/readme.png)
-![Image 2](public/assets/image/readmeimage.png)
-![Image 3](public/assets/image/readmeAllPosts.png)
+![Image 2](public/assets/image/readmePostDetails.png)
 
 ## [PawMily Album App Link](https://pawmily-album.fly.dev/)
 ---
