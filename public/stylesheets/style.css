@@ -158,7 +158,7 @@ h1 {
 }
 
 .pawmily p::before {
-  content: '✨ ';
+  content: ' ';
   color: #ff5722;
 }
 
